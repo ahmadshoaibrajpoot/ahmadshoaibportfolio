@@ -1015,34 +1015,11 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" style="padding: 56px 24px; border-top: 1px solid #222225">
-    <div style="max-width: 1272px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px 48px">
-      <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(08) FAQ</p>
-      <div style="flex: 999 1 600px; min-width: 0">
-        <h2 class="sec-h rv" style="margin-bottom: 48px">QUESTIONS</h2>
-        <div class="rv" style="border-top: 1px solid #222225">
-          <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">
-            <div style="border-bottom: 1px solid #222225">
-              <button aria-expanded="{{ q.expanded }}" onClick="{{ q.toggle }}" style="width: 100%; min-height: 72px; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; background: transparent; border: none; color: #EDEDEE; font-family: inherit; font-size: clamp(18px, 1.7vw, 22px); font-weight: 600; letter-spacing: -0.01em; text-align: left; cursor: pointer">
-                <span>{{ q.q }}</span>
-                <span aria-hidden="true" style="flex: none; font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 400; color: #85858C">{{ q.sign }}</span>
-              </button>
-              <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
-                <p style="margin: 0; padding: 0 0 28px; max-width: 680px; color: #A1A1A7; font-size: 17px; line-height: 1.7">{{ q.a }}</p>
-              </sc-if>
-            </div>
-          </sc-for>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- CONTACT -->
   <section id="contact" style="padding: 0 24px 56px; border-top: 1px solid #222225; overflow: hidden">
     <div class="cband" aria-hidden="true"><div class="cband-t"><sc-for list="{{ band }}" as="b" hint-placeholder-count="14"><span>{{ b.t }} <i>✦</i></span></sc-for></div></div>
     <div style="max-width: 1272px; margin: 0 auto">
-      <p style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(09) CONTACT</p>
+      <p style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(08) CONTACT</p>
       <h2 class="rv" style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(60px, 11vw, 200px); line-height: .88">NEED A SENIOR<br>DESIGNER?</h2>
       <div style="margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px">
         <a class="sl mail" href="mailto:ahmadshoaib225@gmail.com" style="display: inline-flex; align-items: center; min-height: 56px; font-size: clamp(22px, 3.4vw, 48px); font-weight: 500; letter-spacing: -0.02em; color: {{accent}}; overflow-wrap: anywhere">ahmadshoaib225@gmail.com</a>

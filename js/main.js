@@ -1,7 +1,7 @@
 class Component extends DCLogic {
   constructor(...args) {
     super(...args);
-    this.state = { filter: 'all', step: 0, faq: 0, menu: false, sec: 0, ticks: [], ready: false };
+    this.state = { filter: 'all', step: 0, menu: false, sec: 0, ticks: [], ready: false };
   }
   componentDidUpdate() {
     this._syncSeg();
@@ -375,8 +375,8 @@ class Component extends DCLogic {
     const motion = this.props.motion ?? true;
     this._accent = accent;
     this._motionOn = motion;
-    this._secIds = ['top', 'about', 'work', 'kind-words', 'services', 'process', 'toolkit', 'experience', 'faq', 'contact'];
-    const secNames = ['HOME', 'ABOUT', 'WORK', 'RECOMMENDATIONS', 'EXPERTISE', 'PROCESS', 'TOOLKIT', 'EXPERIENCE', 'FAQ', 'CONTACT'];
+    this._secIds = ['top', 'about', 'work', 'kind-words', 'services', 'process', 'toolkit', 'experience', 'contact'];
+    const secNames = ['HOME', 'ABOUT', 'WORK', 'RECOMMENDATIONS', 'EXPERTISE', 'PROCESS', 'TOOLKIT', 'EXPERIENCE', 'CONTACT'];
     if (!this._rootRef) {
       this._rootRef = (el) => { if (el) { this._root = el; this._bindScroll(); } else { this._unbindScroll(); this._root = null; } };
       this._dotRef = (el) => { this._dot = el; };
@@ -391,7 +391,7 @@ class Component extends DCLogic {
     const secIdx = st0.sec || 0;
     const menu = [['About', '#about'], ['Work', '#work'], ['Skills', '#services'], ['Process', '#process'], ['Experience', '#experience'], ['Contact', '#contact']]
       .map((m, i) => ({ label: m[0].toUpperCase(), href: m[1], num: '0' + (i + 1), delay: (0.18 + i * 0.06).toFixed(2) + 's' }));
-    const menu2 = [['Recommendations', '#kind-words'], ['Toolkit', '#toolkit'], ['FAQ', '#faq']].map((m) => ({ label: m[0].toUpperCase(), href: m[1] }));
+    const menu2 = [['Recommendations', '#kind-words'], ['Toolkit', '#toolkit']].map((m) => ({ label: m[0].toUpperCase(), href: m[1] }));
     const ticks = (st0.ticks || []).map((v) => ({ top: v + '%' }));
     if (!this._meshRef) {
       this._meshRef = (el) => {
@@ -410,7 +410,6 @@ class Component extends DCLogic {
     const s = this.state || {};
     const filter = s.filter || 'all';
     const step = s.step || 0;
-    const faq = s.faq === undefined ? 0 : s.faq;
 
     const words = ['UX Research', 'Interface Design', 'Design Systems', 'Prototyping', 'Mobile Apps', 'SaaS Dashboards', 'Usability Testing', 'Dev Handoff'];
     const marquee = words.concat(words).map((w) => ({ label: w }));
@@ -662,21 +661,6 @@ class Component extends DCLogic {
     });
 
 
-    const faqData = [
-      { q: 'Can you lead design, not just execute it?', a: 'Yes. At Teo International I lead UX strategy with executive leadership and engineering and own the UI lifecycle for web, mobile and SaaS products, including research, personas, prototypes and usability testing.' },
-      { q: 'How do you work with engineers and product managers?', a: 'Closely. I hand off annotated, dev-ready Figma files, join standups and reviews, and do design QA on the build. Because I also build in Webflow, Framer, HTML and CSS, I design with implementation in mind.' },
-      { q: 'Can you work across time zones?', a: 'Yes. I’m based in Islamabad (PKT, UTC+5) and have worked remotely with teams in the UK, the USA and Indonesia, keeping a few hours of overlap for live calls and running the rest async.' },
-      { q: 'Can you walk us through your work?', a: 'Happily. The Veroxos and Pamogi case studies at the top of the page show my process end to end, and I can present either one in an interview and talk through the decisions and trade-offs behind it.' }
-    ];
-    const faqs = faqData.map((f, i) => ({
-      ...f,
-      open: i === faq,
-      expanded: i === faq ? 'true' : 'false',
-      sign: i === faq ? '−' : '+',
-      iconBg: i === faq ? accent : '#EDEDEE',
-      toggle: () => this.setState({ faq: i === faq ? -1 : i })
-    }));
-
     const nameChars = 'AHMAD SHOAIB'.split('').map((ch, i) => ({
       ch: ch === ' ' ? '\u00A0' : ch,
       d: (0.08 + i * 0.045).toFixed(3) + 's',
@@ -708,7 +692,7 @@ class Component extends DCLogic {
       menuExpanded: menuOpen ? 'true' : 'false', menuLabel: menuOpen ? 'CLOSE' : 'MENU', menu, menu2, ticks,
       secNum: (secIdx < 10 ? '0' : '') + secIdx, secName: secNames[secIdx],
       meshRef: this._meshRef, onHeroMove: this._onHeroMove, onHeroLeave: this._onHeroLeave,
-      marquee, tools, steps, cur, values, filters, cases, faqs, socials, jobs, brands, toolsText, portfolio, tk1a: tkData[0].slice(0, 2), tk1b: tkData[0].slice(2), tk1m: { has: tkData[0].length > 2, none: tkData[0].length <= 2, n: tkData[0].length, label: tkData[0].length === 1 ? '1 tool' : tkData[0].length + ' tools' }, tk2a: tkData[1].slice(0, 2), tk2b: tkData[1].slice(2), tk2m: { has: tkData[1].length > 2, none: tkData[1].length <= 2, n: tkData[1].length, label: tkData[1].length === 1 ? '1 tool' : tkData[1].length + ' tools' }, tk3a: tkData[2].slice(0, 2), tk3b: tkData[2].slice(2), tk3m: { has: tkData[2].length > 2, none: tkData[2].length <= 2, n: tkData[2].length, label: tkData[2].length === 1 ? '1 tool' : tkData[2].length + ' tools' }, tk4a: tkData[3].slice(0, 2), tk4b: tkData[3].slice(2), tk4m: { has: tkData[3].length > 2, none: tkData[3].length <= 2, n: tkData[3].length, label: tkData[3].length === 1 ? '1 tool' : tkData[3].length + ' tools' }, tk5a: tkData[4].slice(0, 2), tk5b: tkData[4].slice(2), tk5m: { has: tkData[4].length > 2, none: tkData[4].length <= 2, n: tkData[4].length, label: tkData[4].length === 1 ? '1 tool' : tkData[4].length + ' tools' }, tkCount, sv1, sv2, sv3, sv4, sv5, xpCompanies, pages, shotFilters, segRef: this._segRef, indChips, vxLead, vxTotal: shotData.length, vxMotion: shotData.filter((x) => x.vid).length, vxInd: allInds, behance, bhCur, bhTotal: two2(bhData.length), bhPrev: this._bhPrev, bhNext: this._bhNext, shotCols,
+      marquee, tools, steps, cur, values, filters, cases, socials, jobs, brands, toolsText, portfolio, tk1a: tkData[0].slice(0, 2), tk1b: tkData[0].slice(2), tk1m: { has: tkData[0].length > 2, none: tkData[0].length <= 2, n: tkData[0].length, label: tkData[0].length === 1 ? '1 tool' : tkData[0].length + ' tools' }, tk2a: tkData[1].slice(0, 2), tk2b: tkData[1].slice(2), tk2m: { has: tkData[1].length > 2, none: tkData[1].length <= 2, n: tkData[1].length, label: tkData[1].length === 1 ? '1 tool' : tkData[1].length + ' tools' }, tk3a: tkData[2].slice(0, 2), tk3b: tkData[2].slice(2), tk3m: { has: tkData[2].length > 2, none: tkData[2].length <= 2, n: tkData[2].length, label: tkData[2].length === 1 ? '1 tool' : tkData[2].length + ' tools' }, tk4a: tkData[3].slice(0, 2), tk4b: tkData[3].slice(2), tk4m: { has: tkData[3].length > 2, none: tkData[3].length <= 2, n: tkData[3].length, label: tkData[3].length === 1 ? '1 tool' : tkData[3].length + ' tools' }, tk5a: tkData[4].slice(0, 2), tk5b: tkData[4].slice(2), tk5m: { has: tkData[4].length > 2, none: tkData[4].length <= 2, n: tkData[4].length, label: tkData[4].length === 1 ? '1 tool' : tkData[4].length + ' tools' }, tkCount, sv1, sv2, sv3, sv4, sv5, xpCompanies, pages, shotFilters, segRef: this._segRef, indChips, vxLead, vxTotal: shotData.length, vxMotion: shotData.filter((x) => x.vid).length, vxInd: allInds, behance, bhCur, bhTotal: two2(bhData.length), bhPrev: this._bhPrev, bhNext: this._bhNext, shotCols,
       shotTrackCls: 'shot-track ' + ((this._fTick || 0) % 2 ? 'fa' : 'fb'), shotShift: (-100 * shotPage) + '%', shotPageNow: two(shotPage + 1), shotPageTotal: two(shotPages),
       shotPrev: goShot(-1), shotNext: goShot(1), shotAtStart: shotPage === 0, shotAtEnd: shotPage >= shotPages - 1, shotDots,
       shotFrom: shotList.length ? shotPage * perPage + 1 : 0, shotTo: Math.min(shotList.length, shotPage * perPage + perPage), shotCount: shotList.length

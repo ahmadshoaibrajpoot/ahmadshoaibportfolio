@@ -2,7 +2,7 @@ Ahmad Shoaib - Portfolio website
 =================================
 
 Pages
-  index.html     Landing page (loader, hero, about, work, live work, Behance, process, toolkit, experience, FAQ, contact)
+  index.html     Landing page (loader, hero, about, work, live work, Behance, process, toolkit, experience, contact)
   veroxos.html   Case study: Veroxos employee portal
   pamogi.html    Case study: Pamogi
 

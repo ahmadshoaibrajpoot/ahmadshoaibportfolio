@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veroxos Portal — Case Study</title>
+<meta name="description" content="Case study: a self-service employee portal for Veroxos, by Ahmad Shoaib.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/veroxos.css">
+</head>
+<body>
+<div id="app"></div>
+
+<!-- Page template: rendered by js/dc-lite.js using the values from js/veroxos.js -->
+<script type="text/x-template" id="dc-template">
+<div ref="{{ rootRef }}" style="--accent: {{accent}}; background: #0A0A0B; color: #EDEDEE; font-family: Manrope, system-ui, sans-serif; min-height: 100vh">
+
+  <!-- Top bar with chapter tabs and reading progress -->
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(10,10,11,.86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid #222225">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 0 24px; min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a class="sl back" href="index.html" style="display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .16em; text-decoration: none">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+        ALL WORK
+      </a>
+      <nav class="chips" aria-label="Case study chapters" style="display: flex; gap: 0 28px">
+        <sc-for list="{{ chips }}" as="cp" hint-placeholder-count="5">
+          <a class="{{ cp.cls }}" href="{{ cp.href }}" style="position: relative; display: inline-flex; align-items: baseline; gap: 8px; min-height: 44px; align-items: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em">
+            <span style="color: {{ cp.numColor }}">{{ cp.num }}</span>{{ cp.label }}
+            <span class="bar" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: {{accent}}"></span>
+          </a>
+        </sc-for>
+      </nav>
+      <span style="font-family: 'Bebas Neue', Impact, sans-serif; font-size: 22px; letter-spacing: .03em; line-height: 1">AHMAD SHOAIB</span>
+    </div>
+    <div aria-hidden="true" style="height: 2px; background: transparent">
+      <div ref="{{ progRef }}" style="height: 2px; width: 0%; background: {{accent}}"></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" style="padding: 152px 24px 72px">
+    <div style="max-width: 1320px; margin: 0 auto">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px 48px">
+        <div style="flex: 999 1 560px; min-width: 0">
+          <p style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .16em; color: #85858C">UI/UX CASE STUDY · TELECOM EXPENSE MANAGEMENT · 2025</p>
+          <h1 style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(72px, 12vw, 200px); line-height: .86; letter-spacing: .005em">PORTAL<br><span style="color: #8FA8FF">FOR VEROXOS</span></h1>
+        </div>
+        <p style="flex: 1 1 340px; margin: 0; max-width: 440px; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.55; color: #C5C5CA">A self-service web app that shows every employee what their phone costs, what they’re eligible for and where their request is.</p>
+      </div>
+
+      <div class="vx-frame" style="margin-top: 56px; position: relative; aspect-ratio: 1600 / 1250; border-radius: 20px; overflow: hidden; border: 1px solid #222225">
+        <video ref="{{ heroVidRef }}" src="assets/b49ebde0a02c64dd2d40f4d54d6d1881.mp4" poster="assets/85d4a1a3535f3351f5c2d45d0dd18e43.jpg" muted="muted" loop="loop" playsinline="playsinline" preload="auto" aria-label="Animated cover: the Veroxos portal home screen on a laptop" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+      </div>
+
+      <dl style="margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); border-bottom: 1px solid #222225">
+        <sc-for list="{{ meta }}" as="mt" hint-placeholder-count="5">
+          <div style="padding: 24px 24px 24px 0; border-top: 1px solid #222225">
+            <dt style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .16em; color: #8FA8FF">{{ mt.k }}</dt>
+            <dd style="margin: 10px 0 0; font-size: 17px; font-weight: 600; line-height: 1.4">{{ mt.v }}</dd>
+          </div>
+        </sc-for>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Chapters -->
+  <sc-for list="{{ chapters }}" as="ch" hint-placeholder-count="5">
+    <section id="{{ ch.id }}" style="padding: 72px 24px 24px">
+      <div style="max-width: 1320px; margin: 0 auto">
+        <div class="rv" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 48px; padding-bottom: 32px; border-bottom: 1px solid #222225; margin-bottom: 32px">
+          <div style="display: flex; align-items: baseline; gap: 20px">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: .12em; color: {{accent}}">({{ ch.num }})</span>
+            <h2 style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(48px, 6vw, 96px); line-height: .9">{{ ch.titleUp }}</h2>
+          </div>
+          <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #A1A1A7">{{ ch.intro }}</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 28px">
+          <sc-for list="{{ ch.panels }}" as="pn" hint-placeholder-count="2">
+            <figure class="rv vx-frame" style="margin: 0; border-radius: {{ pn.r }}; overflow: hidden">
+              <img src="{{ pn.src }}" alt="{{ pn.alt }}" width="{{ pn.w }}" height="{{ pn.h }}" loading="{{ pn.loading }}" decoding="async" style="display: block; width: 100%; height: auto">
+            </figure>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-for>
+
+  <!-- Closing -->
+  <section style="padding: 96px 24px 56px">
+    <div style="max-width: 1320px; margin: 0 auto; padding-top: 40px; border-top: 1px solid #222225; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 32px 48px">
+      <div>
+        <p style="margin: 0 0 16px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .14em; color: #85858C">THANKS FOR READING</p>
+        <h2 style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(56px, 8vw, 128px); line-height: .88">LET’S BUILD<br>SOMETHING CLEAR.</h2>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center">
+        <a class="btnp" href="mailto:ahmadshoaib225@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; text-decoration: none">Email me</a>
+        <a class="sl" href="pamogi.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 8px; font-weight: 600; font-size: 15px">Next: Pamogi</a>
+        <a class="sl" href="index.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 8px; font-weight: 600; font-size: 15px">Back to all work</a>
+        <a class="sl" href="https://dribbble.com/im_ahmad" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 8px; font-weight: 600; font-size: 15px">More on Dribbble
+          <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </div>
+    </div>
+    <p style="max-width: 1320px; margin: 48px auto 0; font-size: 14px; color: #85858C">© 2026 Ahmad Shoaib</p>
+  </section>
+</div>
+</script>
+
+<script src="js/morphdom.min.js"></script>
+<script src="js/dc-lite.js"></script>
+<script src="js/veroxos.js"></script>
+<script>dcMount(Component, {"accent": "#93B1FF"});</script>
+</body>
+</html>

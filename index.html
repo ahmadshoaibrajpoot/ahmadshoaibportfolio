@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ahmad Shoaib — Senior UI/UX Designer</title>
+<meta name="description" content="Ahmad Shoaib, Senior UI/UX Designer and UX Engineer. SaaS, fintech and mobile products from research to shipped UI and design systems.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="app"></div>
+
+<!-- Page template: rendered by js/dc-lite.js using the values from js/main.js -->
+<script type="text/x-template" id="dc-template">
+<div class="{{rootCls}}" ref="{{ rootRef }}" style="--accent: {{accent}}; background: #0A0A0B; color: #EDEDEE; font-family: Manrope, system-ui, sans-serif; min-height: 100vh; overflow-x: clip">
+
+  <!-- LOADER -->
+  <div class="ldr" aria-hidden="true" ref="{{ ldrBarRef }}">
+    <div class="ldr-top ldr-in"><span><i class="ldr-dot"></i>AHMAD SHOAIB</span><span>DESIGNING YOUR VIEW</span></div>
+    <div class="ldr-stage">
+      <div class="ldr-meta ldr-in"><span>#&nbsp;Home / Portfolio</span><span>1440 × 900 · Auto layout</span></div>
+      <div class="ldr-frame">
+        <div class="lb lb-nav" style="--t:.04"><i></i></div>
+        <div class="lb lb-k" style="--t:.12"><i></i></div>
+        <div class="lb lb-h" style="--t:.2"><i></i><span>AHMAD SHOAIB</span></div>
+        <div class="lb lb-img" style="--t:.3"><i></i></div>
+        <div class="lb lb-s" style="--t:.38"><i></i></div>
+        <div class="lb lb-s2" style="--t:.44"><i></i></div>
+        <div class="lb lb-btn" style="--t:.52"><i></i></div>
+        <div class="lb lb-c lb-c1" style="--t:.6"><i></i></div>
+        <div class="lb lb-c lb-c2" style="--t:.66"><i></i></div>
+        <div class="lb lb-c lb-c3" style="--t:.72"><i></i></div>
+        <div class="ldr-sel"><b></b><b></b><b></b><b></b></div>
+        <span class="ldr-cur"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M1 1l5.5 13.5 2-5.5 5.5-2z" fill="currentColor" stroke="#0A0A0B" stroke-width="1"></path></svg><em>Ahmad</em></span>
+      </div>
+      <ol class="ldr-steps ldr-in">
+        <li style="--t:0"><small>01</small>Research</li>
+        <li style="--t:.25"><small>02</small>Wireframe</li>
+        <li style="--t:.5"><small>03</small>Interface</li>
+        <li style="--t:.75"><small>04</small>Ship</li>
+      </ol>
+    </div>
+    <div class="ldr-bot ldr-in"><div class="ldr-num"><b ref="{{ ldrNumRef }}">000</b><sup>%</sup></div><p><span>SENIOR UI/UX DESIGNER</span><br>PORTFOLIO · 2026</p></div>
+  </div>
+
+  <!-- NAV -->
+  <span id="top"></span>
+  <!-- TOP BAR -->
+  <header class="hi" style="--d: .55s; position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; mix-blend-mode: difference; pointer-events: none">
+    <a href="#top" onClick="{{ closeMenu }}" style="pointer-events: auto; display: inline-flex; align-items: center; min-height: 44px; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 26px; letter-spacing: .02em; line-height: 1; color: #EDEDEE; text-decoration: none">AHMAD SHOAIB</a>
+    <button aria-expanded="{{ menuExpanded }}" aria-controls="site-menu" onClick="{{ toggleMenu }}" style="pointer-events: auto; min-height: 44px; padding: 0; background: none; border: none; color: #EDEDEE; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .22em; display: inline-flex; align-items: center; gap: 14px; cursor: pointer">
+      {{ menuLabel }}
+      <span aria-hidden="true" style="display: inline-flex; flex-direction: column; gap: 6px; width: 26px">
+        <span class="bar1" style="display: block; height: 2px; background: currentColor"></span>
+        <span class="bar2" style="display: block; height: 2px; background: currentColor"></span>
+      </span>
+    </button>
+  </header>
+
+  <!-- FULL-SCREEN MENU -->
+  <div class="ov" id="site-menu">
+    <nav aria-label="Main" style="min-height: 100%; box-sizing: border-box; padding: 104px 28px 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 40px">
+      <ul style="margin: 0; padding: 0; list-style: none">
+        <sc-for list="{{ menu }}" as="m" hint-placeholder-count="6">
+          <li class="mi" style="display: flex; align-items: baseline; gap: 22px; transition-delay: {{ m.delay }}">
+            <span style="flex: 0 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .1em; color: #66666D">{{ m.num }}</span>
+            <a class="ml" href="{{ m.href }}" onClick="{{ closeMenu }}" style="font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(54px, 11.5vh, 128px); line-height: .92; letter-spacing: .005em">{{ m.label }}</a>
+          </li>
+        </sc-for>
+      </ul>
+      <div class="mi" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 48px; padding-left: 44px; transition-delay: .5s">
+        <div style="display: flex; flex-wrap: wrap; gap: 0 28px">
+          <sc-for list="{{ menu2 }}" as="m" hint-placeholder-count="4">
+            <a class="ml sl" href="{{ m.href }}" onClick="{{ closeMenu }}" style="display: inline-flex; align-items: center; min-height: 44px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .2em">{{ m.label }}</a>
+          </sc-for>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0 28px">
+          <sc-for list="{{ socials }}" as="so" hint-placeholder-count="3">
+            <a class="ml sl" href="{{ so.url }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .2em; text-transform: uppercase">{{ so.label }}
+              <svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+            </a>
+          </sc-for>
+          <a class="ml sl" href="assets/Ahmad-Shoaib-Resume.pdf" download="Ahmad_Shoaib_CV.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .2em; text-transform: uppercase">Résumé
+            <svg class="dli" aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SECTION RAIL -->
+  <div class="rail" aria-hidden="true" style="position: fixed; right: 26px; top: 84px; bottom: 22px; width: 1px; background: #2C2C30; z-index: 80; pointer-events: none">
+    <sc-for list="{{ ticks }}" as="tk" hint-placeholder-count="11">
+      <span style="position: absolute; right: 0; top: {{ tk.top }}; width: 8px; height: 1px; background: #55555C"></span>
+    </sc-for>
+    <div ref="{{ dotRef }}" style="position: absolute; right: -4px; top: 0%; width: 9px; height: 9px; margin-top: -4px; border-radius: 50%; background: {{accent}}">
+      <span style="position: absolute; right: 22px; top: -13px; text-align: right; white-space: nowrap; font-family: 'JetBrains Mono', monospace; font-size: 10px; line-height: 1.9; letter-spacing: .2em; color: #85858C">{{ secNum }}<br><span style="color: #EDEDEE">{{ secName }}</span></span>
+      <span style="position: absolute; right: 9px; top: 4px; width: 8px; height: 1px; background: {{accent}}"></span>
+    </div>
+  </div>
+
+
+  <!-- HERO -->
+  <section onPointerMove="{{ onHeroMove }}" onPointerLeave="{{ onHeroLeave }}" style="position: relative; min-height: min(100vh, 920px); padding: 120px 24px 44px; box-sizing: border-box; overflow: hidden; background: #0A0A0B; display: flex; flex-direction: column">
+    <!-- Interactive mesh background -->
+    <canvas ref="{{ meshRef }}" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; z-index: 0"></canvas>
+
+    <!-- HUD marks -->
+    <div class="hud hi" aria-hidden="true" style="--d: .9s; position: absolute; inset: 0; pointer-events: none; z-index: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .22em; color: #55555C">
+      <span style="position: absolute; left: clamp(24px, 5vw, 96px); top: 112px">PORTFOLIO · 2026</span>
+      <span style="position: absolute; right: clamp(56px, 6vw, 110px); top: 112px">ISLAMABAD · UTC+5</span>
+    </div>
+
+    <!-- Name -->
+    <div style="position: relative; z-index: 1; flex: 1; display: flex; align-items: center; justify-content: center; padding: 56px 0 72px">
+      <div style="position: relative; display: inline-block; max-width: 100%">
+        <h1 class="nm" aria-label="Ahmad Shoaib" style="margin: 0; font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif; font-weight: 400; font-size: clamp(60px, 17.6vw, 316px); line-height: .86; letter-spacing: .004em; color: #EDEDEE; white-space: nowrap; text-align: center"><sc-for list="{{ nameChars }}" as="c" hint-placeholder-count="12"><span class="ch" aria-hidden="true"><span class="ch-i" style="--d: {{ c.d }}"><span class="ch-r" style="--rd: {{ c.rd }}">{{ c.ch }}<span class="ch-b">{{ c.ch }}</span></span></span></span></sc-for></h1>
+
+        <!-- signature line -->
+        <svg class="draw" aria-hidden="true" viewBox="0 0 1000 345" preserveAspectRatio="none" style="position: absolute; left: -7%; top: 0; width: 114%; height: 150%; overflow: visible; pointer-events: none; mix-blend-mode: difference">
+          <path d="M 190 212 C 120 250, 22 300, 15 320" fill="none" stroke="#66666D" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+          <path d="M 15 320 C 10 336, 300 290, 560 228 S 900 158, 1000 155" fill="none" stroke="{{accent}}" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Intro + scroll cue -->
+    <div style="position: relative; z-index: 1; width: 100%; max-width: 1560px; margin: 0 auto; padding: 0 clamp(0px, 5vw, 96px); box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px 48px">
+      <div style="max-width: 440px">
+        <p class="hi" style="--d: 1.05s; margin: 0 0 14px; display: inline-flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .2em; color: #EDEDEE"><span class="blink" style="width: 7px; height: 7px; border-radius: 50%; background: #3DDC84"></span>OPEN TO SENIOR PRODUCT DESIGN ROLES</p>
+        <span class="gp up hi" aria-hidden="true" style="--g: 14px; --d: 2.1s"><b>14</b></span>
+        <p class="hi" style="--d: 1.15s; margin: 0 0 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .22em; color: #85858C">SENIOR UI/UX DESIGNER · UX ENGINEER · 6+ YEARS</p>
+        <span class="gp up hi" aria-hidden="true" style="--g: 12px; --d: 2.1s"><b>12</b></span>
+        <p class="hi" style="--d: 1.25s; margin: 0; font-size: 18px; line-height: 1.6; color: #DCDCE0">I design SaaS, fintech and mobile products end to end, from research to shipped UI and design systems, and I build in Webflow and Framer so designs ship the way they were drawn.</p>
+        <span class="gp dn hi" aria-hidden="true" style="--g: 22px; --d: 2.1s"><b>22</b></span>
+        <p class="hero-links hi" style="--d: 1.35s; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 8px; width: max-content; max-width: calc(100vw - 48px)">
+          <sc-for list="{{ socials }}" as="so" hint-placeholder-count="3">
+            <a class="hl" href="{{ so.url }}" target="_blank" rel="noopener" aria-label="{{ so.aria }}"><svg class="si" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{{ so.icon }}"></path></svg><span>{{ so.label }}</span></a>
+          </sc-for>
+          <a class="hl cv" href="assets/Ahmad-Shoaib-Resume.pdf" download="Ahmad_Shoaib_CV.pdf" target="_blank" rel="noopener" aria-label="Download résumé (PDF)"><svg class="si" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 13h6M9 17h4"></path></svg><span>Résumé</span><svg class="dl" aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></svg></a>
+        </p>
+      </div>
+      <a class="hi" href="#work" style="--d: 1.45s; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .22em; color: {{accent}}; text-decoration: none">
+        <span class="blink" style="width: 2px; height: 20px; background: {{accent}}"></span>
+        SEE THE WORK
+      </a>
+    </div>
+  </section>
+
+  <!-- SKILL STRIP -->
+  <div class="sk" aria-label="Skills and tools">
+    <a class="sk-cue" href="#about" aria-label="Scroll to About"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></a>
+    <div class="sk-view">
+      <ul class="sk-track">
+        <sc-for list="{{ skillStrip }}" as="k" hint-placeholder-count="20">
+          <li class="sk-item" aria-hidden="{{ k.dup }}"><span class="sk-b">{{ k.b }}</span>{{ k.t }}</li>
+        </sc-for>
+      </ul>
+    </div>
+    <p class="sk-sub"><span>Research</span><i></i><span>Structure</span><i></i><span>Interface</span><i></i><span>Systems</span><i></i><span>Shipped</span></p>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" style="padding: 56px 24px">
+    <div style="max-width: 1272px; margin: 0 auto">
+      <div class="ab rv">
+        <article class="ab-card ab-main">
+          <p class="ab-lab">(01) ABOUT</p>
+          <p class="ab-lead">I’m a <span class="hw">senior UI/UX designer</span> and <span class="hw">UX engineer</span> in Islamabad. For six years I’ve designed SaaS platforms, fintech apps and e-commerce products for teams in Pakistan, the UK, the US, Indonesia and Denmark.</p>
+          <div class="ab-two">
+            <p><b>Research first.</b> I prototype early, test with real users, and cover the long flows and edge states nobody else drew.</p>
+            <p><b>Built to ship.</b> I work in Webflow, Framer, HTML and CSS, so designs stay realistic and handoff has fewer surprises.</p>
+          </div>
+          <p class="ab-now"><span class="ab-dot"></span>Now: <b>Senior UI/UX Designer at Teo International</b></p>
+        </article>
+        <figure class="ab-card ab-pic">
+          <img src="assets/2afcfcfa0b7aa6c293d7294ce1debeff.jpg" alt="Ahmad Shoaib" loading="lazy" decoding="async">
+          <figcaption><span>Ahmad Shoaib</span><small>Islamabad, PK · UTC+5</small></figcaption>
+        </figure>
+        <div class="ab-card ab-stat" style="--rd: .05s"><dd class="ct" style="--to: 6">+</dd><dt>Years in product design</dt><span class="ab-bar"><i style="--w: 60%"></i></span></div>
+        <div class="ab-card ab-stat" style="--rd: .12s"><dd class="ct" style="--to: 30">+</dd><dt>Products designed and shipped</dt><span class="ab-bar"><i style="--w: 85%"></i></span></div>
+        <div class="ab-card ab-stat" style="--rd: .19s"><dd class="ct" style="--to: 10">+</dd><dt>Industries, from SaaS to fintech</dt><span class="ab-bar"><i style="--w: 70%"></i></span></div>
+        <div class="ab-card ab-stat" style="--rd: .26s"><dd class="ct" style="--to: 5"></dd><dt>Countries: PK, UK, US, ID, DK</dt><span class="ab-bar"><i style="--w: 55%"></i></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" style="padding: 56px 24px; border-top: 1px solid #222225">
+    <div style="max-width: 1272px; margin: 0 auto">
+      <div style="display: flex; flex-wrap: wrap; gap: 24px 48px">
+        <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(02) WORK</p>
+        <div style="flex: 999 1 600px; min-width: 0">
+          <h2 class="sec-h rv" style="margin-bottom: 18px">SELECTED WORK</h2>
+          <p class="rv" style="margin: 0; max-width: 560px; color: #A1A1A7; font-size: 17px; line-height: 1.65">Two client projects in depth, from research and structure to the shipped interface, followed by a gallery of product UI and visual explorations.</p>
+        </div>
+      </div>
+
+      <!-- Featured case study -->
+      <article class="feat rv" style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
+        <a href="veroxos.html" class="feat-m" aria-label="Read the Veroxos portal case study" style="flex: 999 1 560px; min-width: 0; position: relative; display: block; aspect-ratio: 1600 / 1250; border-radius: 16px; overflow: hidden; border: 1px solid #222225; background: #121214">
+          <img src="assets/85d4a1a3535f3351f5c2d45d0dd18e43.jpg" alt="Veroxos portal cover: the employee home screen on a laptop" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+          <video class="auto-v" data-src="assets/b49ebde0a02c64dd2d40f4d54d6d1881.mp4" muted="muted" loop="loop" playsinline="playsinline" preload="none" aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+        </a>
+        <div style="flex: 1 1 360px; min-width: 0">
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C"><span style="color: var(--accent)">CASE STUDY 01</span> · VEROXOS · 2025</p>
+          <h3 style="margin: 14px 0 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(48px, 5vw, 80px); line-height: .9">PORTAL FOR VEROXOS</h3>
+          <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: #A1A1A7">A self-service web app that shows every employee what their phone costs, what they’re eligible for and where their request is, and gives managers approvals and team reporting in the same place.</p>
+          <div style="margin: 24px 0 0; padding: 16px 18px; border: 1px solid #222225; border-radius: 12px; background: #111113; display: flex; gap: 14px; align-items: flex-start">
+            <span aria-hidden="true" style="flex: none; margin-top: 2px; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: #1C1C1F; color: var(--accent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.5"></path></svg></span>
+            <div><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #85858C">THE PROBLEM</p><p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: #DCDCE0">Costs lived only in billing reports and every request went through email, so employees had to ask IT for answers they should see themselves.</p></div>
+          </div>
+          <dl style="margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #222225; border-bottom: 1px solid #222225">
+            <div style="padding: 18px 12px 18px 0"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">70+</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">screens</dt></div>
+            <div style="padding: 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">12</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">flows</dt></div>
+            <div style="padding: 18px 0 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">2</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">roles, one layout</dt></div>
+          </dl>
+          <p style="margin: 18px 0 0; font-size: 15px; color: #C5C5CA">Senior UI/UX Designer · Flows, UI, design system, prototypes</p>
+          <a class="btnp" href="veroxos.html" style="margin-top: 28px; display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; text-decoration: none">Read the case study <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+      </article>
+
+      <article class="feat rev rv" style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
+        <a href="pamogi.html" class="feat-m" aria-label="Read the Pamogi case study" style="flex: 999 1 560px; min-width: 0; position: relative; display: block; aspect-ratio: 1440 / 1024; border-radius: 16px; overflow: hidden; border: 1px solid #222225; background: #0A0917">
+          <img src="assets/15aebe9659fcf46450d0977f16b98e7b.jpg" alt="Pamogi home: a living solar system where every planet is a project" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+          <video class="auto-v" data-src="assets/4b7193f297eccdf613d8d894d5fcdb8f.mp4" muted="muted" loop="loop" playsinline="playsinline" preload="none" aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+        </a>
+        <div style="flex: 1 1 360px; min-width: 0">
+          <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C"><span style="color: var(--accent)">CASE STUDY 02</span> · PAMOGI · WEB3 · 2026</p>
+          <h3 style="margin: 14px 0 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(48px, 5vw, 80px); line-height: .9">A UNIVERSE BUILT AROUND PEOPLE</h3>
+          <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: #A1A1A7">Pamogi turns projects into planets that grow as people contribute. I redesigned the web app so that story shows on every screen, and built the character, low-poly worlds and motion that carry it.</p>
+          <div style="margin: 24px 0 0; padding: 16px 18px; border: 1px solid #222225; border-radius: 12px; background: #111113; display: flex; gap: 14px; align-items: flex-start">
+            <span aria-hidden="true" style="flex: none; margin-top: 2px; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: #1C1C1F; color: var(--accent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.5"></path></svg></span>
+            <div><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #85858C">THE PROBLEM</p><p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: #DCDCE0">A strong idea told in fragments: no shared visual world, content you couldn’t read and icons without labels.</p></div>
+          </div>
+          <dl style="margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #222225; border-bottom: 1px solid #222225">
+            <div style="padding: 18px 12px 18px 0"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">14</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">screens</dt></div>
+            <div style="padding: 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">8</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">distinct assistants</dt></div>
+            <div style="padding: 18px 0 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">5</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">planet ages</dt></div>
+          </dl>
+          <p style="margin: 18px 0 0; font-size: 15px; color: #C5C5CA">UI/UX &amp; visual designer · UI, UX, illustration, motion</p>
+          <a class="btnp" href="pamogi.html" style="margin-top: 28px; display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; text-decoration: none">Read the case study <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+        </div>
+      </article>
+
+      <div class="rv" style="margin-top: 56px; padding-top: 28px; border-top: 1px solid #222225; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px">
+        <p style="margin: 0; max-width: 520px; color: #A1A1A7; font-size: 17px; line-height: 1.65">More case studies, from SaaS portals to mobile apps, are on Behance.</p>
+        <a class="btnp" href="https://www.behance.net/im_ahmad" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; text-decoration: none">View all case studies <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+      </div>
+
+      <!-- Visual explorations -->
+      <div class="vx rv">
+        <p class="vx-lab"><span></span>DESIGN EXPLORATIONS · DRIBBBLE</p>
+        <h3 class="vx-h">Many products.<br>One standard of craft.</h3>
+        <p class="vx-lead">{{ vxLead }}</p>
+
+        <div class="vx-prof">
+          <div class="vx-me">
+            <span class="vx-av"><img src="assets/fa7c53feb160d1955dbf69c17a28d671.jpg" alt="Ahmad Shoaib" loading="lazy"><i title="Available"></i></span>
+            <span><b>Ahmad Shoaib</b><small>Product · UI/Visual · Mobile design</small></span>
+          </div>
+          <dl class="vx-stats">
+            <div><dd>{{ vxTotal }}</dd><dt>Concepts</dt></div>
+            <div><dd>{{ vxMotion }}</dd><dt>In motion</dt></div>
+            <div><dd>{{ vxInd }}</dd><dt>Industries</dt></div>
+            <div><dd>2019</dd><dt>On Dribbble since</dt></div>
+          </dl>
+          <div class="vx-cta">
+            <a class="vx-btn pri" href="https://dribbble.com/im_ahmad" target="_blank" rel="noopener">Dribbble <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+            <a class="vx-btn" href="https://www.behance.net/im_ahmad" target="_blank" rel="noopener">Behance <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+          </div>
+        </div>
+
+        <div class="vx-seg" role="group" aria-label="Filter by type" ref="{{ segRef }}">
+          <span class="vx-ind" aria-hidden="true"></span>
+          <sc-for list="{{ shotFilters }}" as="f" hint-placeholder-count="4">
+            <button type="button" class="{{ f.cls }}" aria-pressed="{{ f.pressed }}" onClick="{{ f.pick }}">{{ f.label }}<span>{{ f.count }}</span></button>
+          </sc-for>
+        </div>
+        <div class="vx-chips" role="group" aria-label="Filter by industry">
+          <sc-for list="{{ indChips }}" as="c" hint-placeholder-count="10">
+            <button type="button" class="{{ c.cls }}" aria-pressed="{{ c.pressed }}" onClick="{{ c.pick }}" style="--dot: {{ c.color }}"><i></i>{{ c.label }}<span>{{ c.count }}</span></button>
+          </sc-for>
+        </div>
+      </div>
+      <!-- Gallery -->
+      <div class="shot-view" aria-roledescription="carousel" aria-label="Selected work" style="margin-top: 40px; overflow: hidden">
+        <div class="{{ shotTrackCls }}" style="display: flex; align-items: flex-start; transform: translateX({{ shotShift }})">
+          <sc-for list="{{ pages }}" as="pg" hint-placeholder-count="1">
+            <div class="shot-page" role="group" aria-roledescription="slide" aria-label="{{ pg.label }}" style="flex: 0 0 100%; min-width: 0; box-sizing: border-box; display: grid; grid-template-columns: repeat({{ shotCols }}, minmax(0, 1fr)); gap: 44px 24px">
+              <sc-for list="{{ pg.items }}" as="sh" hint-placeholder-count="6">
+                <article class="shot" style="--i: {{ $index }}">
+                  <div class="shot-m" data-name="{{ sh.name }}" style="position: relative; aspect-ratio: 4 / 3; border: 1px solid #222225; border-radius: 14px; overflow: hidden">
+                    <img class="shot-img" src="{{ sh.img }}" alt="{{ sh.alt }}" loading="{{ sh.loading }}" decoding="async" onLoad="{{ sh.loaded }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+                    <sc-if value="{{ sh.hasVid }}" hint-placeholder-val="{{ false }}">
+                      <video class="shot-v" data-src="{{ sh.vid }}" muted="muted" loop="loop" playsinline="playsinline" preload="none" aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
+                      <button class="shot-b" aria-label="{{ sh.toggleLabel }}" onClick="{{ sh.toggle }}" style="position: absolute; left: 12px; bottom: 12px; min-height: 32px; padding: 0 12px 0 10px; display: inline-flex; align-items: center; gap: 8px; background: rgba(10,10,11,.82); border: 1px solid rgba(237,237,238,.22); color: #EDEDEE; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: .16em; cursor: pointer">
+                        <span class="ic-dot" aria-hidden="true" style="width: 6px; height: 6px; border-radius: 50%; background: {{accent}}"></span>
+                        MOTION
+                      </button>
+                    </sc-if>
+                  </div>
+                  <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: baseline; gap: 16px">
+                    <h3 style="margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em">
+                      <a class="sl" href="{{ sh.url }}" target="{{ sh.target }}" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 28px">{{ sh.name }} <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+                    </h3>
+                    <span style="flex: none; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .12em; color: #85858C">{{ sh.no }}</span>
+                  </div>
+                  <p style="margin: 4px 0 0; font-size: 15px; line-height: 1.5; color: #A1A1A7">{{ sh.desc }}</p>
+                  <p class="vx-tags"><span style="--dot: {{ sh.color }}"><i></i>{{ sh.ind }}</span><span>{{ sh.kindLabel }}</span><sc-if value="{{ sh.hasVid }}" hint-placeholder-val="{{ false }}"><span>Animated</span></sc-if></p>
+                </article>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- Pager -->
+      <div style="margin-top: 36px; padding-top: 20px; border-top: 1px solid #222225; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
+        <div style="display: flex; align-items: center; gap: 20px">
+          <div style="display: flex; gap: 8px">
+            <button class="pgb" aria-label="Previous projects" onClick="{{ shotPrev }}" disabled="{{ shotAtStart }}" style="width: 48px; height: 48px; display: grid; place-items: center; background: none; border: 1px solid #36363B; color: #EDEDEE; cursor: pointer">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+            </button>
+            <button class="pgb" aria-label="Next projects" onClick="{{ shotNext }}" disabled="{{ shotAtEnd }}" style="width: 48px; height: 48px; display: grid; place-items: center; background: none; border: 1px solid #36363B; color: #EDEDEE; cursor: pointer">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <p aria-live="polite" style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C"><span style="color: #EDEDEE">{{ shotPageNow }}</span> / {{ shotPageTotal }}<span style="margin-left: 16px">{{ shotFrom }}–{{ shotTo }} OF {{ shotCount }}</span></p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0">
+          <sc-for list="{{ shotDots }}" as="dt" hint-placeholder-count="5">
+            <sc-if value="{{ dt.on }}" hint-placeholder-val="{{ false }}">
+              <button aria-label="{{ dt.label }}" aria-current="true" onClick="{{ dt.go }}" style="width: 36px; height: 44px; padding: 0; background: none; border: none; cursor: pointer; display: grid; place-items: center"><span style="display: block; width: 28px; height: 2px; background: {{accent}}"></span></button>
+            </sc-if>
+            <sc-if value="{{ dt.off }}" hint-placeholder-val="{{ true }}">
+              <button class="pgd" aria-label="{{ dt.label }}" onClick="{{ dt.go }}" style="width: 36px; height: 44px; padding: 0; background: none; border: none; cursor: pointer; display: grid; place-items: center"><span style="display: block; width: 28px; height: 2px; background: #36363B"></span></button>
+            </sc-if>
+          </sc-for>
+        </div>
+      </div>
+      <p style="margin: 16px 0 0">
+        <a class="sl" href="https://dribbble.com/im_ahmad" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; font-size: 15px">More shots on Dribbble <svg aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+      </p>
+
+      <!-- Live work: pins on scroll, cards travel sideways -->
+      <div class="lp-pin" ref="{{ lpPinRef }}">
+        <div class="lp-stick">
+          <div class="lp-head">
+            <div>
+              <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C; display: inline-flex; align-items: center; gap: 10px"><span class="blink" style="width: 7px; height: 7px; border-radius: 50%; background: #3DDC84"></span>IN PRODUCTION · {{ liveN }} PROJECTS</p>
+              <h3 class="sub-h">LIVE WORK</h3>
+            </div>
+            <p class="lp-intro">Products and websites I designed for, live today. Keep scrolling to move through them; hover a preview to scroll the real homepage.</p>
+          </div>
+          <div class="lp-rail" ref="{{ lpRailRef }}">
+        <sc-for list="{{ live }}" as="lv" hint-placeholder-count="10">
+          <article class="lp-card rv" style="--tint: {{ lv.tint }}; --rd: {{ lv.rd }}">
+            <a class="lp-shot" href="{{ lv.url }}" target="{{ lv.target }}" rel="noopener" aria-label="{{ lv.aria }}" onPointerMove="{{ lpMove }}" draggable="false">
+              <span class="lp-bar" aria-hidden="true"><span class="lp-dots"><i></i><i></i><i></i></span><span class="lp-url">{{ lv.domain }}</span></span>
+              <span class="lp-view">
+                <sc-if value="{{ lv.hasImg }}" hint-placeholder-val="{{ true }}">
+                  <img class="{{ lv.imgCls }}" src="{{ lv.img }}" alt="{{ lv.alt }}" loading="lazy" decoding="async" draggable="false" style="--sy: {{ lv.sy }}">
+                </sc-if>
+                <sc-if value="{{ lv.noImg }}" hint-placeholder-val="{{ false }}">
+                  <span class="lp-off"><b>{{ lv.name }}</b><small>SITE NO LONGER ONLINE</small></span>
+                </sc-if>
+                <span class="{{ lv.tagCls }}"><i></i>{{ lv.status }}</span>
+                <span class="lp-go" aria-hidden="true">{{ lv.go }} <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+              </span>
+            </a>
+            <div class="lp-body">
+              <p class="lp-k"><span class="lp-n">{{ lv.num }}</span>{{ lv.kind }}</p>
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+                <h4 class="lp-name">{{ lv.name }}</h4>
+                <a class="lp-arrow" href="{{ lv.url }}" target="{{ lv.target }}" rel="noopener" aria-label="{{ lv.aria }}" draggable="false"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+              </div>
+              <p class="lp-what"><span>WHAT IT IS</span>{{ lv.desc }}</p>
+              <ul class="lp-chips">
+                <li>{{ lv.c1 }}</li><li>{{ lv.c2 }}</li>
+              </ul>
+            </div>
+          </article>
+        </sc-for>
+          </div>
+          <div class="lp-foot" aria-hidden="true">
+            <span class="lp-count"><b ref="{{ lpNumRef }}">01</b> / {{ liveN }}</span>
+            <span class="lp-track"><span ref="{{ lpBarRef }}"></span></span>
+            <span class="lp-hint">KEEP SCROLLING <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"></path></svg></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Behance case studies -->
+      <div class="bh rv">
+        <div class="bh-top">
+          <div>
+            <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">CASE STUDIES ARCHIVE · {{ bhTotal }} PROJECTS</p>
+            <h3 class="sub-h">MORE ON BEHANCE</h3>
+          </div>
+          <a class="vx-btn" href="https://www.behance.net/im_ahmad" target="_blank" rel="noopener">Full Behance profile <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+        </div>
+        <div class="bh-box" style="--c: {{ bhCur.color }}">
+          <div class="bh-tabs" role="tablist" aria-label="Behance projects">
+            <sc-for list="{{ behance }}" as="bh" hint-placeholder-count="6">
+              <button type="button" role="tab" class="{{ bh.cls }}" aria-selected="{{ bh.sel }}" onClick="{{ bh.pick }}" style="--tc: {{ bh.color }}">
+                <span class="bh-n">{{ bh.num }}</span>
+                <span class="bh-t"><b>{{ bh.title }}</b><small>{{ bh.kind }}</small></span>
+                <i aria-hidden="true"></i>
+              </button>
+            </sc-for>
+          </div>
+          <div class="bh-panel" role="tabpanel">
+            <a class="bh-cover" href="{{ bhCur.url }}" target="_blank" rel="noopener" aria-label="Open {{ bhCur.title }} on Behance">
+              <sc-for list="{{ behance }}" as="bi" hint-placeholder-count="7"><img class="{{ bi.imgCls }}" src="{{ bi.img }}" alt="{{ bi.alt }}" loading="lazy" decoding="async"></sc-for>
+              <span class="bh-chip">{{ bhCur.kind }}</span>
+            </a>
+            <div class="bh-info">
+              <h4>{{ bhCur.title }}</h4>
+              <p>{{ bhCur.desc }}</p>
+              <div class="bh-act">
+                <a class="vx-btn pri" href="{{ bhCur.url }}" target="_blank" rel="noopener">View on Behance <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
+                <span class="bh-nav"><button type="button" class="pgb bh-arw" onClick="{{ bhPrev }}" aria-label="Previous project"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><button type="button" class="pgb bh-arw" onClick="{{ bhNext }}" aria-label="Next project"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CURRENT WORK -->
+  <section class="cw" aria-labelledby="cw-title">
+    <div class="cw-bg" aria-hidden="true"></div>
+    <div class="cw-keys" aria-hidden="true">
+        <span class="cw-k" style="left: 9%; top: 10%; --kd: -2.91s; --kt: 6.75s; --ko: 1">UX STRATEGY</span>
+        <span class="cw-k" style="left: 17%; top: 8%; --kd: -0.43s; --kt: 10.11s; --ko: .55">DESIGN SYSTEMS</span>
+        <span class="cw-k" style="left: 36%; top: 12%; --kd: -3.29s; --kt: 6.29s; --ko: 1">USABILITY TESTING</span>
+        <span class="cw-k" style="left: 68%; top: 9%; --kd: -1.93s; --kt: 6.43s; --ko: .75">PERSONAS</span>
+        <span class="cw-k" style="left: 84%; top: 13%; --kd: -0.63s; --kt: 6.45s; --ko: .75">JOURNEY MAPS</span>
+        <span class="cw-k" style="left: 91%; top: 24%; --kd: -0.53s; --kt: 8.83s; --ko: .55">DESIGN TOKENS</span>
+        <span class="cw-k" style="left: 9%; top: 26%; --kd: -5.68s; --kt: 8.91s; --ko: .55">ACCESSIBILITY</span>
+        <span class="cw-k" style="left: 15%; top: 40%; --kd: -5.19s; --kt: 7.98s; --ko: .55">PROTOTYPES</span>
+        <span class="cw-k" style="left: 9%; top: 55%; --kd: -0.42s; --kt: 10.29s; --ko: .75">STAKEHOLDER WORKSHOPS</span>
+        <span class="cw-k" style="left: 14%; top: 70%; --kd: -3.77s; --kt: 8.7s; --ko: 1">INFORMATION ARCHITECTURE</span>
+        <span class="cw-k" style="left: 9%; top: 86%; --kd: -2.78s; --kt: 10.08s; --ko: .55">EDGE CASES</span>
+        <span class="cw-k" style="left: 22%; top: 92%; --kd: -0.93s; --kt: 8.86s; --ko: .55">EMPTY STATES</span>
+        <span class="cw-k" style="left: 40%; top: 90%; --kd: -3.35s; --kt: 8.74s; --ko: .55">DESIGN QA</span>
+        <span class="cw-k" style="left: 58%; top: 93%; --kd: -5.08s; --kt: 9.1s; --ko: .75">HANDOFF</span>
+        <span class="cw-k" style="left: 76%; top: 90%; --kd: -6.12s; --kt: 8.14s; --ko: .75">USER INTERVIEWS</span>
+        <span class="cw-k" style="left: 91%; top: 84%; --kd: -4.19s; --kt: 10.62s; --ko: .75">SUCCESS METRICS</span>
+        <span class="cw-k" style="left: 86%; top: 70%; --kd: -2.7s; --kt: 9.97s; --ko: 1">HEURISTIC REVIEW</span>
+        <span class="cw-k" style="left: 91%; top: 56%; --kd: -7.02s; --kt: 6.41s; --ko: .75">COMPONENT LIBRARY</span>
+        <span class="cw-k" style="left: 82%; top: 42%; --kd: -4.73s; --kt: 10.38s; --ko: 1">SAAS</span>
+        <span class="cw-k" style="left: 88%; top: 32%; --kd: -4.04s; --kt: 9.04s; --ko: .55">MOBILE</span>
+        <span class="cw-k" style="left: 24%; top: 22%; --kd: -1.06s; --kt: 8.09s; --ko: .75">WEBFLOW</span>
+        <span class="cw-k" style="left: 74%; top: 24%; --kd: -1.37s; --kt: 8.44s; --ko: .55">FRAMER</span>
+        <span class="cw-k" style="left: 26%; top: 80%; --kd: -8.66s; --kt: 6.39s; --ko: 1">RESEARCH SYNTHESIS</span>
+        <span class="cw-k" style="left: 72%; top: 78%; --kd: -5.16s; --kt: 10.38s; --ko: .75">DESIGN CRITIQUE</span>
+    </div>
+    <div class="cw-in rv">
+      <p class="cw-kick">WHAT I DO BEST</p>
+      <p class="cw-co"><span class="cw-live"><i></i>SENIOR UI/UX DESIGNER · 6+ YEARS</span></p>
+      <h2 id="cw-title" class="cw-title"><span>LEADING UI/UX</span><span class="cw-l2">FROM FIRST SKETCH TO SHIPPED PRODUCT</span></h2>
+      <p class="cw-sub">Leading UX strategy with executives and engineering, and owning the full UI lifecycle for web, mobile and SaaS products: research and personas through to tested prototypes.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="kind-words" style="padding: 56px 24px; border-top: 1px solid #222225">
+    <div style="max-width: 1272px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px 48px">
+      <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(03) RECOMMENDATIONS</p>
+      <div style="flex: 999 1 600px; min-width: 0">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; margin-bottom: 56px">
+          <h2 class="sec-h rv">IN THEIR WORDS</h2>
+          <a class="sl" href="https://www.linkedin.com/in/ahmad-shoaib1/details/recommendations/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; font-size: 15px">All recommendations on LinkedIn
+            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="rec-grid" style="max-width: 1272px; margin: 0 auto">
+          <figure class="rec-card rv" style="--rd: 0.00s; margin: 0; padding: 28px 26px 26px; background: #131315; border: 1px solid #222225; border-radius: 16px; display: flex; flex-direction: column">
+            <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="{{accent}}" style="flex: none; margin-bottom: 18px"><path d="M4 18h6v-6H7c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5zm10 0h6v-6h-3c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5z"></path></svg>
+            <blockquote style="margin: 0; font-size: 19px; line-height: 1.45; letter-spacing: -0.005em; font-weight: 500">Ahmad has a real talent for taking complex B2B products and making them clear and intuitive for the people who use them.</blockquote>
+            <details class="rec" style="margin: 14px 0 20px">
+              <summary style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #A1A1A7">FULL RECOMMENDATION <span class="rec-ic" aria-hidden="true">+</span></summary>
+              <div style="padding: 6px 0 0; font-size: 14px; line-height: 1.7; color: #A1A1A7"><p style="margin: 0 0 12px">I’m pleased to recommend Ahmad, who worked with us at StableLogic as a Senior Product Designer from 2024 to 2026, including UX work on our Veroxos platform. Ahmad has a real talent for taking complex B2B products and making them clear and intuitive for the people who use them. He brought strong UI/UX and design systems skills to our client and product work, and he was always calm, easy to work with and generous with his time. He’s a thoroughly nice person and a valued member of any team, and I wish him every success.</p></div>
+            </details>
+            <figcaption style="margin-top: auto; min-height: 108px; box-sizing: border-box; padding-top: 20px; border-top: 1px solid #222225; display: flex; align-items: flex-start; gap: 14px">
+              <img src="assets/7622a043ef7599b27d4791a4caa9db79.jpg" alt="Craig Robinson" width="48" height="48" loading="lazy" style="flex: none; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; border: 1px solid #36363B; background: #222225">
+              <span style="display: flex; flex-direction: column; gap: 3px">
+                <span style="font-size: 16px; font-weight: 600">Craig Robinson</span>
+                <span style="font-size: 14px; color: #A1A1A7">CEO, StableLogic</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #85858C">SENIOR TO AHMAD</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="rec-card rv" style="--rd: 0.10s; margin: 0; padding: 28px 26px 26px; background: #131315; border: 1px solid #222225; border-radius: 16px; display: flex; flex-direction: column">
+            <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="{{accent}}" style="flex: none; margin-bottom: 18px"><path d="M4 18h6v-6H7c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5zm10 0h6v-6h-3c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5z"></path></svg>
+            <blockquote style="margin: 0; font-size: 19px; line-height: 1.45; letter-spacing: -0.005em; font-weight: 500">He consistently demonstrated strong product design skills, professionalism, and a commitment to delivering high-quality work.</blockquote>
+            <details class="rec" style="margin: 14px 0 20px">
+              <summary style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #A1A1A7">FULL RECOMMENDATION <span class="rec-ic" aria-hidden="true">+</span></summary>
+              <div style="padding: 6px 0 0; font-size: 14px; line-height: 1.7; color: #A1A1A7"><p style="margin: 0 0 12px">I had the pleasure of working with Ahmad across several projects, including Veroxos and easyStorage, where he consistently demonstrated strong product design skills, professionalism, and a commitment to delivering high-quality work. He was reliable, collaborative, and effective at translating requirements into well-designed solutions. Ahmad contributed positively to each project, ensuring good delivery and maintaining a high standard of work. I would happily recommend him to any team looking for a talented and dependable product designer.</p></div>
+            </details>
+            <figcaption style="margin-top: auto; min-height: 108px; box-sizing: border-box; padding-top: 20px; border-top: 1px solid #222225; display: flex; align-items: flex-start; gap: 14px">
+              <img src="assets/e292e117f54d5ecda1ec6296a87046d4.jpg" alt="Sajid Rasool" width="48" height="48" loading="lazy" style="flex: none; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; border: 1px solid #36363B; background: #222225">
+              <span style="display: flex; flex-direction: column; gap: 3px">
+                <span style="font-size: 16px; font-weight: 600">Sajid Rasool</span>
+                <span style="font-size: 14px; color: #A1A1A7">Head of Managed Services, StableLogic</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #85858C">MANAGED AHMAD DIRECTLY</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="rec-card rv" style="--rd: 0.20s; margin: 0; padding: 28px 26px 26px; background: #131315; border: 1px solid #222225; border-radius: 16px; display: flex; flex-direction: column">
+            <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="{{accent}}" style="flex: none; margin-bottom: 18px"><path d="M4 18h6v-6H7c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5zm10 0h6v-6h-3c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5z"></path></svg>
+            <blockquote style="margin: 0; font-size: 19px; line-height: 1.45; letter-spacing: -0.005em; font-weight: 500">He brings creativity, attention to detail, and a strong understanding of user-centered design to his work.</blockquote>
+            <details class="rec" style="margin: 14px 0 20px">
+              <summary style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #A1A1A7">FULL RECOMMENDATION <span class="rec-ic" aria-hidden="true">+</span></summary>
+              <div style="padding: 6px 0 0; font-size: 14px; line-height: 1.7; color: #A1A1A7"><p style="margin: 0 0 12px">I had an amazing time working with Ahmad, and it was a great experience. He brings creativity, attention to detail, and a strong understanding of user-centered design to his work.</p><p style="margin: 0 0 12px">What I particularly appreciated was his ability to translate requirements into intuitive, visually appealing designs while remaining open to feedback and collaboration. He demonstrated a great sense of ownership, adaptability, and commitment to delivering quality work.</p><p style="margin: 0 0 12px">I truly enjoyed working with him and would highly recommend him to any team looking for a talented and dedicated UI/UX Designer. Wishing him continued success in his career!</p></div>
+            </details>
+            <figcaption style="margin-top: auto; min-height: 108px; box-sizing: border-box; padding-top: 20px; border-top: 1px solid #222225; display: flex; align-items: flex-start; gap: 14px">
+              <img src="assets/2b5a3ee703696bb1d8a806df5ba00328.jpg" alt="Saba Qadir" width="48" height="48" loading="lazy" style="flex: none; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; border: 1px solid #36363B; background: #222225">
+              <span style="display: flex; flex-direction: column; gap: 3px">
+                <span style="font-size: 16px; font-weight: 600">Saba Qadir</span>
+                <span style="font-size: 14px; color: #A1A1A7">UI/UX Expert &amp; Project Manager</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #85858C">MANAGED AHMAD DIRECTLY</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="rec-card rv" style="--rd: 0.30s; margin: 0; padding: 28px 26px 26px; background: #131315; border: 1px solid #222225; border-radius: 16px; display: flex; flex-direction: column">
+            <svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="{{accent}}" style="flex: none; margin-bottom: 18px"><path d="M4 18h6v-6H7c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5zm10 0h6v-6h-3c0-2 1-3.5 3-4V5c-4 .6-6 3.5-6 8v5z"></path></svg>
+            <blockquote style="margin: 0; font-size: 19px; line-height: 1.45; letter-spacing: -0.005em; font-weight: 500">He brings a rare mix of sharp analytical thinking and creativity and a great collaborative energy to the team.</blockquote>
+            <details class="rec" style="margin: 14px 0 20px">
+              <summary style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #A1A1A7">FULL RECOMMENDATION <span class="rec-ic" aria-hidden="true">+</span></summary>
+              <div style="padding: 6px 0 0; font-size: 14px; line-height: 1.7; color: #A1A1A7"><p style="margin: 0 0 12px">I’ve had the pleasure of working with Ahmad for 1 year. He brings a rare mix of sharp analytical thinking and creativity and a great collaborative energy to the team. Whether tackling complex challenges or supporting colleagues, he always delivers with reliability and a positive attitude. Anyone would be lucky to have them on their team.</p></div>
+            </details>
+            <figcaption style="margin-top: auto; min-height: 108px; box-sizing: border-box; padding-top: 20px; border-top: 1px solid #222225; display: flex; align-items: flex-start; gap: 14px">
+              <img src="assets/dd5e797e5a6fd1597bf9c92b66296776.jpg" alt="Jeevan Nijjar" width="48" height="48" loading="lazy" style="flex: none; width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block; border: 1px solid #36363B; background: #222225">
+              <span style="display: flex; flex-direction: column; gap: 3px">
+                <span style="font-size: 16px; font-weight: 600">Jeevan Nijjar</span>
+                <span style="font-size: 14px; color: #A1A1A7">Product Owner</span>
+                <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .08em; color: #85858C">WORKED ON THE SAME TEAM</span>
+              </span>
+            </figcaption>
+          </figure>
+    </div>
+  </section>
+
+  <!-- SERVICES + STRENGTHS -->
+  <section id="services" style="padding: 56px 24px; border-top: 1px solid #222225">
+    <div style="max-width: 1272px; margin: 0 auto">
+      <p style="margin: 0 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(04) EXPERTISE</p>
+      <div style="min-width: 0">
+        <h2 class="sec-h rv" style="margin-bottom: 18px">WHAT I DO &amp;<br>WHAT I BRING</h2>
+        <p class="rv" style="margin: 0 0 48px; max-width: 560px; color: #A1A1A7; font-size: 17px; line-height: 1.65">Five skills I use every day, and what a team gets when I join.</p>
+        <div class="skg rv">
+          <article class="skc w3" style="--rd: 0s"><div class="skv"><svg viewBox="0 0 320 150" aria-hidden="true"><g class="sk-flow" fill="none" stroke-width="1.6"><path pathLength="1" d="M40 75 C80 75 80 35 120 35 L170 35 C210 35 210 75 250 75"></path><path pathLength="1" style="--d:.5s" d="M40 75 C80 75 80 115 120 115 L170 115 C210 115 210 75 250 75"></path></g><g class="sk-nodes"><circle cx="40" cy="75" r="9"></circle><circle style="--d:.3s" cx="145" cy="35" r="7"></circle><circle style="--d:.7s" cx="145" cy="115" r="7"></circle><circle class="end" style="--d:1.1s" cx="262" cy="75" r="12"></circle></g><circle class="sk-dot" r="4"><animateMotion dur="3.6s" repeatCount="indefinite" path="M40 75 C80 75 80 35 120 35 L170 35 C210 35 210 75 250 75"></animateMotion></circle></svg></div><div class="skt"><span class="idx">01</span><h3>Product UX</h3><p>{{ sv1 }}</p></div></article>
+          <article class="skc w3" style="--rd: .06s"><div class="skv"><div class="sk-ui" aria-hidden="true"><span class="sk-ui-bar"></span><span class="sk-ui-hero"></span><span class="sk-ui-l"></span><span class="sk-ui-l s"></span><span class="sk-ui-tg"><i></i></span><span class="sk-ui-btn"></span></div></div><div class="skt"><span class="idx">02</span><h3>UI Design</h3><p>{{ sv2 }}</p></div></article>
+          <article class="skc w2" style="--rd: .12s"><div class="skv"><div class="sk-ds" aria-hidden="true"><span class="sk-ds-tok"><i></i>--brand</span><span class="sk-ds-grid"><b style="--d:0s"></b><b style="--d:.12s"></b><b style="--d:.24s"></b><b style="--d:.36s"></b><b style="--d:.48s"></b><b style="--d:.6s"></b></span></div></div><div class="skt"><span class="idx">03</span><h3>Design Systems</h3><p>{{ sv3 }}</p></div></article>
+          <article class="skc w2" style="--rd: .18s"><div class="skv"><div class="sk-pr" aria-hidden="true"><span class="sk-ph a"><i></i><i></i><em></em></span><svg class="sk-arrow" viewBox="0 0 60 20"><path pathLength="1" d="M4 10 H52 M44 4 L52 10 L44 16" fill="none" stroke-width="1.6"></path></svg><span class="sk-ph b"><i></i><i></i><i></i></span><span class="sk-tap"></span></div></div><div class="skt"><span class="idx">04</span><h3>Prototyping</h3><p>{{ sv4 }}</p></div></article>
+          <article class="skc w2" style="--rd: .24s"><div class="skv"><svg viewBox="0 0 320 150" aria-hidden="true"><g class="sk-team"><path d="M160 75 L80 40 M160 75 L80 110 M160 75 L240 40 M160 75 L240 110 M160 75 L160 20" pathLength="1"></path></g><circle class="sk-ring" cx="160" cy="75" r="16"></circle><circle class="sk-hub" cx="160" cy="75" r="16"></circle><g class="sk-mates"><circle cx="80" cy="40" r="10" style="--d:0s"></circle><circle cx="80" cy="110" r="10" style="--d:.2s"></circle><circle cx="240" cy="40" r="10" style="--d:.4s"></circle><circle cx="240" cy="110" r="10" style="--d:.6s"></circle><circle cx="160" cy="20" r="10" style="--d:.8s"></circle></g></svg></div><div class="skt"><span class="idx">05</span><h3>UX Leadership</h3><p>{{ sv5 }}</p></div></article>
+        </div>
+
+        <div class="stg rv">
+          <p class="stg-lab"><span></span>WHAT I BRING TO A TEAM</p>
+          <div class="stg-grid">
+            <sc-for list="{{ values }}" as="v" hint-placeholder-count="6">
+              <div class="stg-i">
+                <span class="stg-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="{{ v.icon }}"></path></svg></span>
+                <div><h3>{{ v.title }}</h3><p>{{ v.body }}</p></div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" style="padding: 56px 24px; border-top: 1px solid #222225">
+    <div style="max-width: 1272px; margin: 0 auto">
+      <p style="margin: 0 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(05) PROCESS</p>
+      <div style="min-width: 0">
+        <h2 class="sec-h rv" style="margin-bottom: 18px">HOW I WORK</h2>
+        <p style="margin: 0 0 48px; max-width: 520px; color: #A1A1A7; font-size: 17px; line-height: 1.65">How I take a problem from first conversation to a shipped, measured product. It isn’t a waterfall: research and testing loop back in at every stage. The stages advance on their own; pick one to stop and read it.</p>
+
+        <div role="tablist" aria-label="Process stages" style="display: flex; flex-wrap: wrap; gap: 0 36px; border-bottom: 1px solid #222225">
+          <sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+            <sc-if value="{{ st.active }}" hint-placeholder-val="{{ false }}">
+              <button role="tab" aria-selected="true" onClick="{{ st.pick }}" style="min-height: 56px; padding: 8px 0 12px; margin-bottom: -1px; background: none; border: none; border-bottom: 2px solid #36363B; position: relative; color: #EDEDEE; cursor: pointer; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 30px; letter-spacing: .02em; display: inline-flex; align-items: baseline; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: {{accent}}">{{ st.num }}</span>{{ st.verb }}<span class="{{ stepBarCls }}" aria-hidden="true"></span></button>
+            </sc-if>
+            <sc-if value="{{ st.inactive }}" hint-placeholder-val="{{ true }}">
+              <button role="tab" aria-selected="false" onClick="{{ st.pick }}" style="min-height: 56px; padding: 8px 0 12px; margin-bottom: -1px; background: none; border: none; border-bottom: 2px solid transparent; color: #85858C; cursor: pointer; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 30px; letter-spacing: .02em; display: inline-flex; align-items: baseline; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #85858C">{{ st.num }}</span>{{ st.verb }}</button>
+            </sc-if>
+          </sc-for>
+        </div>
+
+        <div role="tabpanel" class="pr-panel">
+          <div class="pr-text">
+            <p class="pr-kicker">{{ cur.num }} · {{ cur.time }}</p>
+            <h3 class="pr-title">{{ cur.title }}</h3>
+            <p class="pr-q">“{{ cur.q }}”</p>
+            <p class="pr-body">{{ cur.body }}</p>
+            <div class="pr-meta">
+              <div>
+                <p class="pr-lab">METHODS</p>
+                <ul class="pr-chips"><sc-for list="{{ cur.methodsL }}" as="m" hint-placeholder-count="4"><li>{{ m.t }}</li></sc-for></ul>
+              </div>
+              <div>
+                <p class="pr-lab">WHO I WORK WITH</p>
+                <p class="pr-with">{{ cur.with }}</p>
+              </div>
+            </div>
+            <div class="pr-lens"><span>SENIOR LENS</span><p>{{ cur.lens }}</p></div>
+          </div>
+          <div class="pr-side">
+            <div class="pv-stage">
+              <div class="pv pv-aff {{ pvc1 }}" aria-hidden="true">
+                  <span class="pv-hd" style="left: 6%">PAIN POINTS</span><span class="pv-hd" style="left: 39%">GOALS</span><span class="pv-hd" style="left: 72%">HABITS</span>
+                  <i class="pv-note" style="--c: #FF8A8A; --x0: 58%; --y0: 66%; --x1: 6%; --y1: 24%"><b></b><b></b></i>
+                  <i class="pv-note" style="--c: #93B1FF; --x0: 14%; --y0: 58%; --x1: 39%; --y1: 24%"><b></b><b></b></i>
+                  <i class="pv-note" style="--c: #F2C230; --x0: 36%; --y0: 30%; --x1: 72%; --y1: 24%"><b></b><b></b></i>
+                  <i class="pv-note" style="--c: #FF8A8A; --x0: 74%; --y0: 48%; --x1: 6%; --y1: 41%"><b></b><b></b></i>
+                  <i class="pv-note" style="--c: #93B1FF; --x0: 6%; --y0: 20%; --x1: 39%; --y1: 41%"><b></b><b></b></i>
+                  <i class="pv-note" style="--c: #F2C230; --x0: 46%; --y0: 72%; --x1: 72%; --y1: 41%"><b></b><b></b></i>
+                  <i class="pv-note" style="--c: #FF8A8A; --x0: 70%; --y0: 16%; --x1: 6%; --y1: 58%"><b></b><b></b></i>
+                  <i class="pv-note" style="--c: #93B1FF; --x0: 24%; --y0: 76%; --x1: 39%; --y1: 58%"><b></b><b></b></i>
+                  <span class="pv-cap">AFFINITY MAPPING · INTERVIEW NOTES → THEMES</span>
+                </div>
+              <div class="pv pv-flow {{ pvc2 }}" aria-hidden="true">
+                  <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+                    <g class="pv-lines" fill="none" stroke-width="1.6">
+                      <path pathLength="1" style="--d: .2s" d="M110 150 C135 150 135 80 160 80"></path>
+                      <path pathLength="1" style="--d: .5s" d="M110 150 C135 150 135 220 160 220"></path>
+                      <path pathLength="1" style="--d: .8s" d="M240 80 C265 80 265 150 290 150"></path>
+                      <path pathLength="1" style="--d: 1.1s" d="M240 220 C265 220 265 150 290 150"></path>
+                    </g>
+                    <g class="pv-nodes">
+                      <g style="--d: 0s"><rect x="30" y="130" width="80" height="40" rx="9"></rect><text x="70" y="154">ENTRY</text></g>
+                      <g style="--d: .35s"><rect x="160" y="60" width="80" height="40" rx="9"></rect><text x="200" y="84">SIGN UP</text></g>
+                      <g style="--d: .65s"><rect x="160" y="200" width="80" height="40" rx="9"></rect><text x="200" y="224">EXPLORE</text></g>
+                      <g style="--d: 1s" class="goal"><rect x="290" y="130" width="80" height="40" rx="9"></rect><text x="330" y="154">VALUE</text></g>
+                    </g>
+                    <circle class="pv-user" r="5"><animateMotion dur="4.2s" repeatCount="indefinite" path="M70 150 L110 150 C135 150 135 80 160 80 L240 80 C265 80 265 150 290 150 L330 150"></animateMotion></circle>
+                  </svg>
+                  <span class="pv-cap">USER FLOW · THE SHORTEST PATH TO VALUE</span>
+                </div>
+              <div class="pv pv-wire {{ pvc3 }}" aria-hidden="true">
+                  <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+                    <g class="pv-draw" fill="none" stroke-width="1.5"><rect pathLength="1" x="40" y="28" width="320" height="236" rx="10"></rect><path pathLength="1" d="M40 52 H360"></path><rect pathLength="1" x="58" y="70" width="170" height="92" rx="6"></rect><path pathLength="1" d="M58 70 L228 162 M228 70 L58 162"></path><path pathLength="1" d="M246 80 H340 M246 96 H326 M246 112 H334"></path><rect pathLength="1" x="246" y="132" width="64" height="22" rx="11"></rect><rect pathLength="1" x="58" y="180" width="88" height="66" rx="6"></rect><rect pathLength="1" x="156" y="180" width="88" height="66" rx="6"></rect><rect pathLength="1" x="254" y="180" width="88" height="66" rx="6"></rect></g>
+                    <g class="pv-cursor"><path d="M0 0 L0 15 L4 11 L7 18 L10 17 L7 10 L12 10 Z"></path><animateMotion dur="5s" repeatCount="indefinite" keyPoints="0;.35;.35;.7;.7;1" keyTimes="0;.25;.4;.65;.8;1" calcMode="linear" path="M330 250 L276 141 L276 141 L200 210 L200 210 L330 250"></animateMotion></g>
+                    <circle class="pv-tap" cx="278" cy="143" r="4"></circle>
+                  </svg>
+                  <span class="pv-cap">LOW-FI WIREFRAME · TESTED BEFORE IT'S POLISHED</span>
+                </div>
+              <div class="pv pv-ui {{ pvc4 }}" aria-hidden="true">
+                  <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+                    <defs><linearGradient id="pvG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#93B1FF"></stop><stop offset="1" stop-color="#6C7BFF"></stop></linearGradient></defs>
+                    <rect x="40" y="28" width="320" height="236" rx="10" fill="#141417" stroke="#2A2A30"></rect>
+                    <g class="pv-pop">
+                      <g style="--d: .1s"><rect x="40" y="28" width="320" height="24" rx="10" fill="#1C1C21"></rect><circle cx="56" cy="40" r="3" fill="#FF8A8A"></circle><circle cx="66" cy="40" r="3" fill="#F2C230"></circle><circle cx="76" cy="40" r="3" fill="#3DDC84"></circle></g>
+                      <g style="--d: .35s"><rect x="58" y="70" width="170" height="92" rx="8" fill="url(#pvG)"></rect><path d="M76 132 H160 M76 144 H130" stroke="#0A0A0B" stroke-width="5" stroke-linecap="round" opacity=".55"></path></g>
+                      <g style="--d: .6s"><path d="M246 80 H340" stroke="#EDEDEE" stroke-width="6" stroke-linecap="round"></path><path d="M246 96 H326 M246 110 H334" stroke="#55555C" stroke-width="4" stroke-linecap="round"></path></g>
+                      <g style="--d: .85s" class="pv-btn"><rect x="246" y="132" width="64" height="22" rx="11" fill="#EDEDEE"></rect><path d="M262 143 H294" stroke="#0A0A0B" stroke-width="3" stroke-linecap="round"></path></g>
+                      <g style="--d: 1.05s"><rect x="58" y="180" width="88" height="66" rx="8" fill="#1C1C21"></rect><rect x="68" y="190" width="20" height="20" rx="6" fill="#3DDC84" opacity=".85"></rect><path d="M68 224 H128 M68 234 H110" stroke="#46464D" stroke-width="4" stroke-linecap="round"></path></g>
+                      <g style="--d: 1.2s"><rect x="156" y="180" width="88" height="66" rx="8" fill="#1C1C21"></rect><rect x="166" y="190" width="20" height="20" rx="6" fill="#F2C230" opacity=".85"></rect><path d="M166 224 H226 M166 234 H208" stroke="#46464D" stroke-width="4" stroke-linecap="round"></path></g>
+                      <g style="--d: 1.35s"><rect x="254" y="180" width="88" height="66" rx="8" fill="#1C1C21"></rect><rect x="264" y="190" width="20" height="20" rx="6" fill="#93B1FF" opacity=".85"></rect><path d="M264 224 H324 M264 234 H306" stroke="#46464D" stroke-width="4" stroke-linecap="round"></path></g>
+                    </g>
+                  </svg>
+                  <span class="pv-tokens"><i style="--c: #93B1FF"></i><i style="--c: #EDEDEE"></i><i style="--c: #3DDC84"></i><i style="--c: #F2C230"></i><b>Aa</b></span>
+                  <span class="pv-cap">UI + DESIGN TOKENS · EVERY STATE, EVERY SCREEN</span>
+                </div>
+              <div class="pv pv-ship {{ pvc5 }}" aria-hidden="true">
+                  <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet">
+                    <g opacity=".42">
+                      <rect x="40" y="28" width="320" height="236" rx="10" fill="#141417" stroke="#2A2A30"></rect>
+                      <rect x="58" y="70" width="170" height="92" rx="8" fill="#93B1FF" opacity=".55"></rect>
+                      <rect x="246" y="132" width="64" height="22" rx="11" fill="#EDEDEE"></rect>
+                      <rect x="58" y="180" width="88" height="66" rx="8" fill="#1C1C21"></rect><rect x="156" y="180" width="88" height="66" rx="8" fill="#1C1C21"></rect><rect x="254" y="180" width="88" height="66" rx="8" fill="#1C1C21"></rect>
+                    </g>
+                    <g class="pv-red">
+                      <g style="--d: .2s"><path d="M58 64 H228 M58 60 V68 M228 60 V68"></path><text x="143" y="58">170</text></g>
+                      <g style="--d: .5s"><path d="M236 132 V154 M232 132 H240 M232 154 H240"></path><text x="226" y="147" text-anchor="end">22</text></g>
+                      <g style="--d: .8s"><path d="M146 213 H156 M146 209 V217 M156 209 V217"></path><text x="151" y="203">10</text></g>
+                    </g>
+                  </svg>
+                  <span class="pv-check">
+                    <span style="--d: 1.1s"><i></i>Specs annotated</span>
+                    <span style="--d: 1.7s"><i></i>Design QA on build</span>
+                    <span style="--d: 2.3s"><i></i>Released &amp; measured</span>
+                    <em><b></b></em>
+                  </span>
+                  <span class="pv-live"><i></i>LIVE</span>
+                  <span class="pv-cap">HANDOFF · REDLINES, QA AND RELEASE</span>
+                </div>
+            </div>
+            <p class="pr-lab" style="margin-top: 26px">OUTPUTS</p>
+            <ul class="pr-out">
+              <sc-for list="{{ cur.gets }}" as="g" hint-placeholder-count="3">
+                <li><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>{{ g.label }}</li>
+              </sc-for>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pr-always rv">
+          <p class="pr-lab">ACROSS EVERY STAGE</p>
+          <div class="pr-grid">
+            <div><b>Alignment</b><p>Short written updates and a decision log, so stakeholders never lose the thread.</p></div>
+            <div><b>Critique</b><p>Regular reviews with designers and engineers, before work is called final.</p></div>
+            <div><b>Accessibility</b><p>WCAG AA contrast, focus states and target sizes checked from wireframe to build.</p></div>
+            <div><b>Measurement</b><p>Every stage ties back to the success metrics agreed in discovery.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLKIT -->
+  <section id="toolkit" style="padding: 56px 24px; border-top: 1px solid #222225">
+    <div style="max-width: 1272px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px 48px">
+      <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(06) TOOLKIT</p>
+      <div style="flex: 999 1 600px; min-width: 0">
+        <h2 class="sec-h rv" style="margin-bottom: 18px">MY TOOLKIT</h2>
+        <p class="rv" style="margin: 0 0 44px; max-width: 560px; color: #A1A1A7; font-size: 17px; line-height: 1.65">The tools I reach for at each stage, from the first sticky note to the live build. {{ tkCount }} tools across five stages.</p>
+      </div>
+    </div>
+    <div class="tk rv">
+          <div class="tk-view">
+            <div class="tk-track">
+          <article class="tk-col" style="--i: 0">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-note" style="--d:0s;left:22%;top:26%"></span><span class="tv-note b" style="--d:.25s;left:46%;top:40%"></span><span class="tv-note c" style="--d:.5s;left:30%;top:56%"></span></div>
+            <div class="tk-head"><span class="idx">01</span><h3>Research</h3><p>Make sense of the problem</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk1a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk1m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk1m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk1m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk1m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk1b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" style="--i: 1">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-frame"><i style="--d:0s"></i><i style="--d:.15s"></i><i style="--d:.3s"></i><i style="--d:.45s"></i></span></div>
+            <div class="tk-head"><span class="idx">02</span><h3>Design</h3><p>Interfaces and systems</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk2a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk2m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk2m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk2m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk2m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk2b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" style="--i: 2">
+            <div class="tk-vis" aria-hidden="true"><svg viewBox="0 0 200 100"><path class="tv-curve" d="M20 82 C80 82 90 18 180 18" pathLength="1"></path><circle class="tv-ball" r="5"><animateMotion dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 .2 1" path="M20 82 C80 82 90 18 180 18"></animateMotion></circle></svg></div>
+            <div class="tk-head"><span class="idx">03</span><h3>Motion</h3><p>Bring the UI to life</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk3a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk3m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk3m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk3m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk3m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk3b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" style="--i: 3">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-ai"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg></span><span class="tv-gen"><i style="--d:.2s"></i><i style="--d:.5s"></i><i style="--d:.8s"></i></span></div>
+            <div class="tk-head"><span class="idx">04</span><h3>AI-assisted</h3><p>Move faster, explore wider</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk4a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk4m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk4m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk4m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk4m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk4b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" style="--i: 4">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-code"><b>&lt;/&gt;</b><i style="--d:.1s;width:70%"></i><i style="--d:.4s;width:52%;margin-left:12%"></i><i style="--d:.7s;width:62%;margin-left:12%"></i><i style="--d:1s;width:40%"></i></span></div>
+            <div class="tk-head"><span class="idx">05</span><h3>Build</h3><p>Ship it for real</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk5a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk5m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk5m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk5m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk5m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk5b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" aria-hidden="true" style="--i: 0">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-note" style="--d:0s;left:22%;top:26%"></span><span class="tv-note b" style="--d:.25s;left:46%;top:40%"></span><span class="tv-note c" style="--d:.5s;left:30%;top:56%"></span></div>
+            <div class="tk-head"><span class="idx">01</span><h3>Research</h3><p>Make sense of the problem</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk1a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk1m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk1m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk1m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk1m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk1b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" aria-hidden="true" style="--i: 1">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-frame"><i style="--d:0s"></i><i style="--d:.15s"></i><i style="--d:.3s"></i><i style="--d:.45s"></i></span></div>
+            <div class="tk-head"><span class="idx">02</span><h3>Design</h3><p>Interfaces and systems</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk2a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk2m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk2m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk2m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk2m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk2b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" aria-hidden="true" style="--i: 2">
+            <div class="tk-vis" aria-hidden="true"><svg viewBox="0 0 200 100"><path class="tv-curve" d="M20 82 C80 82 90 18 180 18" pathLength="1"></path><circle class="tv-ball" r="5"><animateMotion dur="2.4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines=".6 0 .2 1" path="M20 82 C80 82 90 18 180 18"></animateMotion></circle></svg></div>
+            <div class="tk-head"><span class="idx">03</span><h3>Motion</h3><p>Bring the UI to life</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk3a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk3m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk3m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk3m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk3m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk3b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" aria-hidden="true" style="--i: 3">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-ai"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg></span><span class="tv-gen"><i style="--d:.2s"></i><i style="--d:.5s"></i><i style="--d:.8s"></i></span></div>
+            <div class="tk-head"><span class="idx">04</span><h3>AI-assisted</h3><p>Move faster, explore wider</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk4a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk4m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk4m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk4m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk4m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk4b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+          <article class="tk-col" aria-hidden="true" style="--i: 4">
+            <div class="tk-vis" aria-hidden="true"><span class="tv-code"><b>&lt;/&gt;</b><i style="--d:.1s;width:70%"></i><i style="--d:.4s;width:52%;margin-left:12%"></i><i style="--d:.7s;width:62%;margin-left:12%"></i><i style="--d:1s;width:40%"></i></span></div>
+            <div class="tk-head"><span class="idx">05</span><h3>Build</h3><p>Ship it for real</p></div>
+            <ul class="tk-tools">
+              <sc-for list="{{ tk5a }}" as="t" hint-placeholder-count="2">
+                <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+              </sc-for>
+            </ul>
+            <sc-if value="{{ tk5m.none }}" hint-placeholder-val="{{ false }}">
+              <p class="tk-foot">{{ tk5m.label }}</p>
+            </sc-if>
+            <sc-if value="{{ tk5m.has }}" hint-placeholder-val="{{ false }}">
+              <details class="tk-more">
+                <summary><span class="o">Show all {{ tk5m.n }} tools</span><span class="c">Show less</span><svg aria-hidden="true" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></summary>
+                <ul class="tk-tools tk-extra">
+                  <sc-for list="{{ tk5b }}" as="t" hint-placeholder-count="2">
+                    <li><span class="tk-b">{{ t.b }}</span><span><b>{{ t.name }}</b><small>{{ t.use }}</small></span></li>
+                  </sc-for>
+                </ul>
+              </details>
+            </sc-if>
+          </article>
+            </div>
+          </div>
+        </div>
+    <div style="max-width: 1272px; margin: 0 auto">
+      <div style="margin-left: auto; width: min(100%, calc(100% - 248px)); min-width: min(100%, 600px)">
+        <p class="rv" style="margin: 32px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; color: #85858C; font-size: 15px">Your team uses something else? I pick up new tools quickly.<a class="sl" href="mailto:ahmadshoaib225@gmail.com" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; color: #EDEDEE">Ask me about your stack</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE & EDUCATION -->
+  <section id="experience" style="padding: 56px 24px; border-top: 1px solid #222225">
+    <div class="xp">
+      <aside class="xp-side">
+        <p style="margin: 0 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(07) EXPERIENCE</p>
+        <h2 class="sec-h rv" style="font-size: clamp(52px, 6vw, 96px)">WHERE<br>I’VE MADE<br>MY MARK.</h2>
+        <p class="rv" style="margin: 24px 0 0; max-width: 360px; color: #A1A1A7; font-size: 16px; line-height: 1.65">Six years across product companies, agencies and remote teams in the UK, the US, Indonesia and Denmark, designing web, mobile and SaaS products end to end.</p>
+        <dl class="xp-num rv">
+          <div><dd>06<sup>+</sup></dd><dt>Years</dt></div>
+          <div><dd>{{ xpCompanies }}</dd><dt>Companies</dt></div>
+          <div><dd>05</dd><dt>Countries</dt></div>
+        </dl>
+        <div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px">
+          <a class="btnp" href="assets/Ahmad-Shoaib-Resume.pdf" download="Ahmad_Shoaib_CV.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 22px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; letter-spacing: .01em; text-decoration: none">Download résumé (PDF) <svg class="dli" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></svg></a>
+          <a class="sl" href="https://www.linkedin.com/in/ahmad-shoaib1/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 600; font-size: 15px">LinkedIn profile</a>
+        </div>
+      </aside>
+
+      <div class="xp-main">
+        <div class="xp-head" aria-hidden="true"><span>No.</span><span>Period / Role</span><span>Company</span><span>Type</span></div>
+        <ol class="xp-list rv">
+          <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="7">
+            <li class="{{ j.cls }}">
+              <span class="xp-no">{{ j.no }}</span>
+              <div class="xp-role">
+                <p class="xp-when">{{ j.period }}</p>
+                <h3>{{ j.role }}</h3>
+                <p class="xp-body">{{ j.body }}</p>
+              </div>
+              <div class="xp-co"><b>{{ j.company }}</b><span>{{ j.place }}</span></div>
+              <div class="xp-type"><span class="{{ j.tagCls }}">{{ j.type }}</span></div>
+            </li>
+          </sc-for>
+        </ol>
+
+        <div class="rv" style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 32px 56px">
+          <div style="flex: 1 1 240px">
+            <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">EDUCATION</p>
+            <p style="margin: 0; font-size: 17px; line-height: 1.6">BS Information Technology, Government College University Faisalabad, 2014–2018</p>
+          </div>
+          <div style="flex: 1 1 240px">
+            <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">CERTIFICATES</p>
+            <p style="margin: 0; font-size: 17px; line-height: 1.6">Foundations of UX Design (Coursera); Empathize, Define and Ideate; Wireframes and Low-Fidelity Prototypes; Webflow 101</p>
+          </div>
+          <div style="flex: 1 1 240px">
+            <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">LANGUAGES</p>
+            <p style="margin: 0; font-size: 17px; line-height: 1.6">Urdu (native), English (fluent)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="padding: 56px 24px; border-top: 1px solid #222225">
+    <div style="max-width: 1272px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px 48px">
+      <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(08) FAQ</p>
+      <div style="flex: 999 1 600px; min-width: 0">
+        <h2 class="sec-h rv" style="margin-bottom: 48px">QUESTIONS</h2>
+        <div class="rv" style="border-top: 1px solid #222225">
+          <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="5">
+            <div style="border-bottom: 1px solid #222225">
+              <button aria-expanded="{{ q.expanded }}" onClick="{{ q.toggle }}" style="width: 100%; min-height: 72px; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px; background: transparent; border: none; color: #EDEDEE; font-family: inherit; font-size: clamp(18px, 1.7vw, 22px); font-weight: 600; letter-spacing: -0.01em; text-align: left; cursor: pointer">
+                <span>{{ q.q }}</span>
+                <span aria-hidden="true" style="flex: none; font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 400; color: #85858C">{{ q.sign }}</span>
+              </button>
+              <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+                <p style="margin: 0; padding: 0 0 28px; max-width: 680px; color: #A1A1A7; font-size: 17px; line-height: 1.7">{{ q.a }}</p>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding: 0 24px 56px; border-top: 1px solid #222225; overflow: hidden">
+    <div class="cband" aria-hidden="true"><div class="cband-t"><sc-for list="{{ band }}" as="b" hint-placeholder-count="14"><span>{{ b.t }} <i>✦</i></span></sc-for></div></div>
+    <div style="max-width: 1272px; margin: 0 auto">
+      <p style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(09) CONTACT</p>
+      <h2 class="rv" style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(60px, 11vw, 200px); line-height: .88">NEED A SENIOR<br>DESIGNER?</h2>
+      <div style="margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px">
+        <a class="sl mail" href="mailto:ahmadshoaib225@gmail.com" style="display: inline-flex; align-items: center; min-height: 56px; font-size: clamp(22px, 3.4vw, 48px); font-weight: 500; letter-spacing: -0.02em; color: {{accent}}; overflow-wrap: anywhere">ahmadshoaib225@gmail.com</a>
+        <button type="button" class="{{ copyCls }}" onClick="{{ copyMail }}" aria-live="polite">{{ copyLabel }}</button>
+      </div>
+      <div style="margin-top: 56px; padding-top: 24px; border-top: 1px solid #222225; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 32px; font-size: 16px">
+        <div style="display: flex; flex-wrap: wrap; gap: 0 28px">
+          <sc-for list="{{ socials }}" as="so" hint-placeholder-count="3">
+            <a class="sl" href="{{ so.url }}" target="_blank" rel="noopener" style="min-height: 44px; display: inline-flex; align-items: center; gap: 9px; font-weight: 600"><svg class="si" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{{ so.icon }}"></path></svg>{{ so.label }}</a>
+          </sc-for>
+          <a class="sl" href="assets/Ahmad-Shoaib-Resume.pdf" download="Ahmad_Shoaib_CV.pdf" target="_blank" rel="noopener" style="min-height: 44px; display: inline-flex; align-items: center; gap: 8px; font-weight: 600">Download résumé <svg class="dli" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"></path></svg></a>
+        </div>
+        <span style="color: #A1A1A7">Islamabad, Pakistan (UTC+5). I usually reply within a day.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding: 24px 24px 40px">
+    <div style="max-width: 1272px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; font-size: 14px; color: #85858C">
+      <span style="display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em"><span style="display: inline-flex; align-items: center; gap: 8px; color: #EDEDEE"><span class="blink" style="width: 6px; height: 6px; border-radius: 50%; background: #3DDC84"></span>OPEN TO SENIOR ROLES</span><span>ISLAMABAD, PAKISTAN</span><span>WORKING ACROSS TIME ZONES</span><span>© 2026 AHMAD SHOAIB</span></span>
+      <a class="sl" href="#top" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 600">Back to top</a>
+    </div>
+  </footer>
+</div>
+</script>
+
+<script src="js/morphdom.min.js"></script>
+<script src="js/dc-lite.js"></script>
+<script src="js/main.js"></script>
+<script>dcMount(Component, {"accent": "#93B1FF", "motion": true});</script>
+</body>
+</html>

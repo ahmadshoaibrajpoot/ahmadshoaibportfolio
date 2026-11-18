@@ -1,0 +1,34 @@
+/* Pamogi — Case Study */
+body{margin:0;background:#0A0917}
+html{scroll-behavior:smooth}
+a{color:#ECEAF4}a:hover{color:#FFFFFF}
+a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-offset:4px}
+section[id]{scroll-margin-top:96px}
+.sl{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:0 calc(50% + .78em);background-size:0% 1px;transition:background-size .4s cubic-bezier(.2,.75,.2,1),color .25s ease}
+.sl:hover,.sl:focus-visible{background-size:100% 1px;color:#FFFFFF}
+.sl svg{transition:transform .35s cubic-bezier(.2,.75,.2,1)}
+.sl:hover svg{transform:translate(2px,-2px)}
+.sl.back:hover svg{transform:translateX(-3px)}
+.chip{color:#8C88A6;text-decoration:none;transition:color .25s ease}
+.chip:hover{color:#ECEAF4}
+.chip.on{color:#ECEAF4}
+.chip .bar{transform:scaleX(0);transform-origin:left;transition:transform .45s cubic-bezier(.2,.75,.2,1)}
+.chip.on .bar{transform:scaleX(1)}
+.btnp{transition:background-color .3s ease,color .3s ease}
+.btnp:hover,.btnp:focus-visible{background-color:#ECEAF4;color:#0A0917 !important}
+.pm-frame{background:linear-gradient(100deg,#100E22 30%,#18162E 50%,#100E22 70%);background-size:300% 100%;animation:pmLoad 1.6s linear infinite}
+@keyframes pmLoad{from{background-position:100% 0}to{background-position:-50% 0}}
+.auto-v{opacity:0;transition:opacity .5s ease}
+.auto-v.on{opacity:1}
+.scr-track{transition:transform .8s cubic-bezier(.65,0,.25,1);will-change:transform}
+.scr-slide{transition:opacity .6s ease}
+.scr-slide[aria-hidden="true"]{opacity:.3}
+.tab{color:#8C88A6;transition:color .25s ease,border-color .25s ease}
+.tab:hover{color:#ECEAF4}
+.pgb{transition:background-color .25s ease,color .25s ease,border-color .25s ease,opacity .25s ease}
+.pgb:hover:not(:disabled){background:#ECEAF4 !important;color:#0A0917 !important;border-color:#ECEAF4 !important}
+.pgb:disabled{opacity:.3;cursor:default !important}
+.js-rv .rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.75,.2,1)}
+.js-rv .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){.js-rv .rv{opacity:1;transform:none;transition:none}.pm-frame{animation:none}.scr-track,.scr-slide{transition:none}}
+@media (max-width: 900px){.chips{display:none !important}}

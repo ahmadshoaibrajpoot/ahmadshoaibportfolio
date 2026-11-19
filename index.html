@@ -14,7 +14,9 @@
 
 <!-- Page template: rendered by js/dc-lite.js using the values from js/main.js -->
 <script type="text/x-template" id="dc-template">
-<div class="{{rootCls}}" ref="{{ rootRef }}" style="--accent: {{accent}}; background: #0A0A0B; color: #EDEDEE; font-family: Manrope, system-ui, sans-serif; min-height: 100vh; overflow-x: clip">
+<div class="{{rootCls}}" ref="{{ rootRef }}" style="--accent: {{accent}}; background: #0A0A0B; color: #EDEDEE; font-family: Manrope, system-ui, sans-serif; min-height: 100vh; overflow-x: clip; isolation: isolate">
+  <!-- Page glow: fixed aurora behind every section; the hero paints its own solid background over it -->
+  <div class="pg-glow" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
   <!-- LOADER -->
   <div class="ldr" aria-hidden="true" ref="{{ ldrBarRef }}">
@@ -188,7 +190,7 @@
   </section>
 
   <!-- WORK -->
-  <section id="work" style="padding: 56px 24px; border-top: 1px solid #222225">
+  <section id="work" style="padding: 56px 24px; border-top: 1px solid rgba(255,255,255,.12)">
     <div style="max-width: 1272px; margin: 0 auto">
       <div style="display: flex; flex-wrap: wrap; gap: 24px 48px">
         <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(02) WORK</p>
@@ -200,7 +202,7 @@
 
       <!-- Featured case study -->
       <article class="feat rv" style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
-        <a href="veroxos.html" class="feat-m" aria-label="Read the Veroxos portal case study" style="flex: 999 1 560px; min-width: 0; position: relative; display: block; aspect-ratio: 1600 / 1250; border-radius: 16px; overflow: hidden; border: 1px solid #222225; background: #121214">
+        <a href="veroxos.html" class="feat-m" aria-label="Read the Veroxos portal case study" style="flex: 999 1 560px; min-width: 0; position: relative; display: block; aspect-ratio: 1600 / 1250; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); background: #121214">
           <img src="assets/85d4a1a3535f3351f5c2d45d0dd18e43.jpg" alt="Veroxos portal cover: the employee home screen on a laptop" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
           <video class="auto-v" data-src="assets/b49ebde0a02c64dd2d40f4d54d6d1881.mp4" muted="muted" loop="loop" playsinline="playsinline" preload="none" aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
         </a>
@@ -208,14 +210,14 @@
           <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C"><span style="color: var(--accent)">CASE STUDY 01</span> · VEROXOS · 2025</p>
           <h3 style="margin: 14px 0 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(48px, 5vw, 80px); line-height: .9">PORTAL FOR VEROXOS</h3>
           <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: #A1A1A7">A self-service web app that shows every employee what their phone costs, what they’re eligible for and where their request is, and gives managers approvals and team reporting in the same place.</p>
-          <div style="margin: 24px 0 0; padding: 16px 18px; border: 1px solid #222225; border-radius: 12px; background: #111113; display: flex; gap: 14px; align-items: flex-start">
+          <div style="margin: 24px 0 0; padding: 16px 18px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: #111113; display: flex; gap: 14px; align-items: flex-start">
             <span aria-hidden="true" style="flex: none; margin-top: 2px; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: #1C1C1F; color: var(--accent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.5"></path></svg></span>
             <div><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #85858C">THE PROBLEM</p><p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: #DCDCE0">Costs lived only in billing reports and every request went through email, so employees had to ask IT for answers they should see themselves.</p></div>
           </div>
-          <dl style="margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #222225; border-bottom: 1px solid #222225">
+          <dl style="margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12)">
             <div style="padding: 18px 12px 18px 0"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">70+</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">screens</dt></div>
-            <div style="padding: 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">12</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">flows</dt></div>
-            <div style="padding: 18px 0 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">2</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">roles, one layout</dt></div>
+            <div style="padding: 18px 12px; border-left: 1px solid rgba(255,255,255,.12)"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">12</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">flows</dt></div>
+            <div style="padding: 18px 0 18px 12px; border-left: 1px solid rgba(255,255,255,.12)"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">2</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">roles, one layout</dt></div>
           </dl>
           <p style="margin: 18px 0 0; font-size: 15px; color: #C5C5CA">Senior UI/UX Designer · Flows, UI, design system, prototypes</p>
           <a class="btnp" href="veroxos.html" style="margin-top: 28px; display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; text-decoration: none">Read the case study <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
@@ -223,7 +225,7 @@
       </article>
 
       <article class="feat rev rv" style="margin-top: 64px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
-        <a href="pamogi.html" class="feat-m" aria-label="Read the Pamogi case study" style="flex: 999 1 560px; min-width: 0; position: relative; display: block; aspect-ratio: 1440 / 1024; border-radius: 16px; overflow: hidden; border: 1px solid #222225; background: #0A0917">
+        <a href="pamogi.html" class="feat-m" aria-label="Read the Pamogi case study" style="flex: 999 1 560px; min-width: 0; position: relative; display: block; aspect-ratio: 1440 / 1024; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.12); background: #0A0917">
           <img src="assets/15aebe9659fcf46450d0977f16b98e7b.jpg" alt="Pamogi home: a living solar system where every planet is a project" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
           <video class="auto-v" data-src="assets/4b7193f297eccdf613d8d894d5fcdb8f.mp4" muted="muted" loop="loop" playsinline="playsinline" preload="none" aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
         </a>
@@ -231,21 +233,21 @@
           <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C"><span style="color: var(--accent)">CASE STUDY 02</span> · PAMOGI · WEB3 · 2026</p>
           <h3 style="margin: 14px 0 0; font-family: 'Bebas Neue', Impact, sans-serif; font-weight: 400; font-size: clamp(48px, 5vw, 80px); line-height: .9">A UNIVERSE BUILT AROUND PEOPLE</h3>
           <p style="margin: 18px 0 0; font-size: 17px; line-height: 1.65; color: #A1A1A7">Pamogi turns projects into planets that grow as people contribute. I redesigned the web app so that story shows on every screen, and built the character, low-poly worlds and motion that carry it.</p>
-          <div style="margin: 24px 0 0; padding: 16px 18px; border: 1px solid #222225; border-radius: 12px; background: #111113; display: flex; gap: 14px; align-items: flex-start">
+          <div style="margin: 24px 0 0; padding: 16px 18px; border: 1px solid rgba(255,255,255,.12); border-radius: 12px; background: #111113; display: flex; gap: 14px; align-items: flex-start">
             <span aria-hidden="true" style="flex: none; margin-top: 2px; width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: #1C1C1F; color: var(--accent)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6M12 16.5v.5"></path></svg></span>
             <div><p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: .14em; color: #85858C">THE PROBLEM</p><p style="margin: 6px 0 0; font-size: 15px; line-height: 1.55; color: #DCDCE0">A strong idea told in fragments: no shared visual world, content you couldn’t read and icons without labels.</p></div>
           </div>
-          <dl style="margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid #222225; border-bottom: 1px solid #222225">
+          <dl style="margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12)">
             <div style="padding: 18px 12px 18px 0"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">14</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">screens</dt></div>
-            <div style="padding: 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">8</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">distinct assistants</dt></div>
-            <div style="padding: 18px 0 18px 12px; border-left: 1px solid #222225"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">5</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">planet ages</dt></div>
+            <div style="padding: 18px 12px; border-left: 1px solid rgba(255,255,255,.12)"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">8</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">distinct assistants</dt></div>
+            <div style="padding: 18px 0 18px 12px; border-left: 1px solid rgba(255,255,255,.12)"><dd style="margin: 0; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 44px; line-height: .9">5</dd><dt style="margin-top: 6px; font-size: 13px; color: #A1A1A7">planet ages</dt></div>
           </dl>
           <p style="margin: 18px 0 0; font-size: 15px; color: #C5C5CA">UI/UX &amp; visual designer · UI, UX, illustration, motion</p>
           <a class="btnp" href="pamogi.html" style="margin-top: 28px; display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; text-decoration: none">Read the case study <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
         </div>
       </article>
 
-      <div class="rv" style="margin-top: 56px; padding-top: 28px; border-top: 1px solid #222225; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px">
+      <div class="rv" style="margin-top: 56px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px">
         <p style="margin: 0; max-width: 520px; color: #A1A1A7; font-size: 17px; line-height: 1.65">More case studies, from SaaS portals to mobile apps, are on Behance.</p>
         <a class="btnp" href="https://www.behance.net/im_ahmad" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 24px; border: 1px solid #EDEDEE; color: #EDEDEE; font-weight: 600; font-size: 15px; text-decoration: none">View all case studies <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
       </div>
@@ -292,7 +294,7 @@
             <div class="shot-page" role="group" aria-roledescription="slide" aria-label="{{ pg.label }}" style="flex: 0 0 100%; min-width: 0; box-sizing: border-box; display: grid; grid-template-columns: repeat({{ shotCols }}, minmax(0, 1fr)); gap: 44px 24px">
               <sc-for list="{{ pg.items }}" as="sh" hint-placeholder-count="6">
                 <article class="shot" style="--i: {{ $index }}">
-                  <div class="shot-m" data-name="{{ sh.name }}" style="position: relative; aspect-ratio: 4 / 3; border: 1px solid #222225; border-radius: 14px; overflow: hidden">
+                  <div class="shot-m" data-name="{{ sh.name }}" style="position: relative; aspect-ratio: 4 / 3; border: 1px solid rgba(255,255,255,.12); border-radius: 14px; overflow: hidden">
                     <img class="shot-img" src="{{ sh.img }}" alt="{{ sh.alt }}" loading="{{ sh.loading }}" decoding="async" onLoad="{{ sh.loaded }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
                     <sc-if value="{{ sh.hasVid }}" hint-placeholder-val="{{ false }}">
                       <video class="shot-v" data-src="{{ sh.vid }}" muted="muted" loop="loop" playsinline="playsinline" preload="none" aria-hidden="true" tabindex="-1" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></video>
@@ -318,7 +320,7 @@
       </div>
 
       <!-- Pager -->
-      <div style="margin-top: 36px; padding-top: 20px; border-top: 1px solid #222225; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
+      <div style="margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
         <div style="display: flex; align-items: center; gap: 20px">
           <div style="display: flex; gap: 8px">
             <button class="pgb" aria-label="Previous projects" onClick="{{ shotPrev }}" disabled="{{ shotAtStart }}" style="width: 48px; height: 48px; display: grid; place-items: center; background: none; border: 1px solid #36363B; color: #EDEDEE; cursor: pointer">
@@ -436,7 +438,7 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="kind-words" style="padding: 56px 24px; border-top: 1px solid #222225">
+  <section id="kind-words" style="padding: 56px 24px; border-top: 1px solid rgba(255,255,255,.12)">
     <div style="max-width: 1272px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px 48px">
       <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(03) RECOMMENDATIONS</p>
       <div style="flex: 999 1 600px; min-width: 0">
@@ -478,14 +480,14 @@
   </section>
 
   <!-- PROCESS -->
-  <section id="process" style="padding: 56px 24px; border-top: 1px solid #222225">
+  <section id="process" style="padding: 56px 24px; border-top: 1px solid rgba(255,255,255,.12)">
     <div style="max-width: 1272px; margin: 0 auto">
       <p style="margin: 0 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(04) PROCESS</p>
       <div style="min-width: 0">
         <h2 class="sec-h rv" style="margin-bottom: 18px">HOW I WORK</h2>
         <p style="margin: 0 0 48px; max-width: 520px; color: #A1A1A7; font-size: 17px; line-height: 1.65">How I take a problem from first conversation to a shipped, measured product. It isn’t a waterfall: research and testing loop back in at every stage. The stages advance on their own; pick one to stop and read it.</p>
 
-        <div role="tablist" aria-label="Process stages" style="display: flex; flex-wrap: wrap; gap: 0 36px; border-bottom: 1px solid #222225">
+        <div role="tablist" aria-label="Process stages" style="display: flex; flex-wrap: wrap; gap: 0 36px; border-bottom: 1px solid rgba(255,255,255,.12)">
           <sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
             <sc-if value="{{ st.active }}" hint-placeholder-val="{{ false }}">
               <button role="tab" aria-selected="true" onClick="{{ st.pick }}" style="min-height: 56px; padding: 8px 0 12px; margin-bottom: -1px; background: none; border: none; border-bottom: 2px solid #36363B; position: relative; color: #EDEDEE; cursor: pointer; font-family: 'Bebas Neue', Impact, sans-serif; font-size: 30px; letter-spacing: .02em; display: inline-flex; align-items: baseline; gap: 8px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; color: {{accent}}">{{ st.num }}</span>{{ st.verb }}<span class="{{ stepBarCls }}" aria-hidden="true"></span></button>
@@ -618,7 +620,7 @@
   </section>
 
   <!-- TOOLKIT -->
-  <section id="toolkit" style="padding: 56px 24px; border-top: 1px solid #222225">
+  <section id="toolkit" style="padding: 56px 24px; border-top: 1px solid rgba(255,255,255,.12)">
     <div style="max-width: 1272px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 24px 48px">
       <p style="flex: 0 0 200px; margin: 14px 0 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(05) TOOLKIT</p>
       <div style="flex: 999 1 600px; min-width: 0">
@@ -860,7 +862,7 @@
   </section>
 
   <!-- EXPERIENCE & EDUCATION -->
-  <section id="experience" style="padding: 56px 24px; border-top: 1px solid #222225">
+  <section id="experience" style="padding: 56px 24px; border-top: 1px solid rgba(255,255,255,.12)">
     <div class="xp">
       <aside class="xp-side">
         <p style="margin: 0 0 22px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(06) EXPERIENCE</p>
@@ -913,7 +915,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" style="padding: 0 24px 56px; border-top: 1px solid #222225; overflow: hidden">
+  <section id="contact" style="padding: 0 24px 56px; border-top: 1px solid rgba(255,255,255,.12); overflow: hidden">
     <div class="cband" aria-hidden="true"><div class="cband-t"><sc-for list="{{ band }}" as="b" hint-placeholder-count="14"><span>{{ b.t }} <i>✦</i></span></sc-for></div></div>
     <div style="max-width: 1272px; margin: 0 auto">
       <p style="margin: 0 0 20px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">(07) CONTACT</p>
@@ -922,7 +924,7 @@
         <a class="sl mail" href="mailto:ahmadshoaib225@gmail.com" style="display: inline-flex; align-items: center; min-height: 56px; font-size: clamp(22px, 3.4vw, 48px); font-weight: 500; letter-spacing: -0.02em; color: {{accent}}; overflow-wrap: anywhere">ahmadshoaib225@gmail.com</a>
         <button type="button" class="{{ copyCls }}" onClick="{{ copyMail }}" aria-live="polite">{{ copyLabel }}</button>
       </div>
-      <div style="margin-top: 56px; padding-top: 24px; border-top: 1px solid #222225; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 32px; font-size: 16px">
+      <div style="margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 32px; font-size: 16px">
         <div style="display: flex; flex-wrap: wrap; gap: 0 28px">
           <sc-for list="{{ socials }}" as="so" hint-placeholder-count="3">
             <a class="sl" href="{{ so.url }}" target="_blank" rel="noopener" style="min-height: 44px; display: inline-flex; align-items: center; gap: 9px; font-weight: 600"><svg class="si" aria-hidden="true" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="{{ so.icon }}"></path></svg>{{ so.label }}</a>
@@ -948,5 +950,6 @@
 <script src="js/dc-lite.js"></script>
 <script src="js/main.js"></script>
 <script>dcMount(Component, {"accent": "#93B1FF", "motion": true});</script>
+<script src="js/cursor.js"></script>
 </body>
 </html>

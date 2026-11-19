@@ -350,10 +350,10 @@
         <div class="lp-stick">
           <div class="lp-head">
             <div>
-              <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C; display: inline-flex; align-items: center; gap: 10px"><span class="blink" style="width: 7px; height: 7px; border-radius: 50%; background: #3DDC84"></span>IN PRODUCTION · {{ liveN }} PROJECTS</p>
+              <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C; display: inline-flex; align-items: center; gap: 10px"><span class="blink" style="width: 7px; height: 7px; border-radius: 50%; background: #3DDC84"></span>{{ liveOnly }} IN PRODUCTION · {{ bhTotal }} ON BEHANCE</p>
               <h3 class="sub-h">LIVE WORK</h3>
             </div>
-            <p class="lp-intro">Products and websites I designed for, live today. Keep scrolling to move through them; hover a preview to scroll the real homepage.</p>
+            <p class="lp-intro">Products and websites I designed for, live today, followed by more case studies from <a class="sl" href="https://www.behance.net/im_ahmad" target="_blank" rel="noopener" style="color: #EDEDEE">my Behance</a>. Keep scrolling to move through them; hover a site preview to scroll the real homepage.</p>
           </div>
           <div class="lp-rail" ref="{{ lpRailRef }}">
         <sc-for list="{{ live }}" as="lv" hint-placeholder-count="10">
@@ -389,42 +389,6 @@
             <span class="lp-count"><b ref="{{ lpNumRef }}">01</b> / {{ liveN }}</span>
             <span class="lp-track"><span ref="{{ lpBarRef }}"></span></span>
             <span class="lp-hint">KEEP SCROLLING <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"></path></svg></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Behance case studies -->
-      <div class="bh rv">
-        <div class="bh-top">
-          <div>
-            <p style="margin: 0 0 10px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: .12em; color: #85858C">CASE STUDIES ARCHIVE · {{ bhTotal }} PROJECTS</p>
-            <h3 class="sub-h">MORE ON BEHANCE</h3>
-          </div>
-          <a class="vx-btn" href="https://www.behance.net/im_ahmad" target="_blank" rel="noopener">Full Behance profile <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
-        </div>
-        <div class="bh-box" style="--c: {{ bhCur.color }}">
-          <div class="bh-tabs" role="tablist" aria-label="Behance projects">
-            <sc-for list="{{ behance }}" as="bh" hint-placeholder-count="6">
-              <button type="button" role="tab" class="{{ bh.cls }}" aria-selected="{{ bh.sel }}" onClick="{{ bh.pick }}" style="--tc: {{ bh.color }}">
-                <span class="bh-n">{{ bh.num }}</span>
-                <span class="bh-t"><b>{{ bh.title }}</b><small>{{ bh.kind }}</small></span>
-                <i aria-hidden="true"></i>
-              </button>
-            </sc-for>
-          </div>
-          <div class="bh-panel" role="tabpanel">
-            <a class="bh-cover" href="{{ bhCur.url }}" target="_blank" rel="noopener" aria-label="Open {{ bhCur.title }} on Behance">
-              <sc-for list="{{ behance }}" as="bi" hint-placeholder-count="7"><img class="{{ bi.imgCls }}" src="{{ bi.img }}" alt="{{ bi.alt }}" loading="lazy" decoding="async"></sc-for>
-              <span class="bh-chip">{{ bhCur.kind }}</span>
-            </a>
-            <div class="bh-info">
-              <h4>{{ bhCur.title }}</h4>
-              <p>{{ bhCur.desc }}</p>
-              <div class="bh-act">
-                <a class="vx-btn pri" href="{{ bhCur.url }}" target="_blank" rel="noopener">View on Behance <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"></path></svg></a>
-                <span class="bh-nav"><button type="button" class="pgb bh-arw" onClick="{{ bhPrev }}" aria-label="Previous project"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><button type="button" class="pgb bh-arw" onClick="{{ bhNext }}" aria-label="Next project"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button></span>
-              </div>
-            </div>
           </div>
         </div>
       </div>

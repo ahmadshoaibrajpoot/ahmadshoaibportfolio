@@ -611,6 +611,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 .lp-tag i{width:6px;height:6px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:lpPulse 2s ease-out infinite}
 .lp-tag.off i{background:#66666D;animation:none;box-shadow:none}
 .lp-tag.cs i{background:var(--accent);animation:none;box-shadow:none}
+.lp-tag.bh i{background:#1769FF;animation:none;box-shadow:none}
 @keyframes lpPulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.55)}70%{box-shadow:0 0 0 7px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
 .lp-go{position:absolute;left:var(--mx,50%);top:var(--my,50%);z-index:3;display:inline-flex;align-items:center;gap:6px;height:38px;padding:0 16px;border-radius:999px;background:#EDEDEE;color:#0A0A0B;font-size:13px;font-weight:600;white-space:nowrap;pointer-events:none;transform:translate(-50%,-50%) scale(.4);opacity:0;transition:opacity .25s ease,transform .35s cubic-bezier(.2,.75,.2,1)}
 .lp-shot:hover .lp-go{opacity:1;transform:translate(-50%,-50%) scale(1)}

@@ -545,15 +545,7 @@ class Component extends DCLogic {
     const bhDesc = { 'Web app': 'The full case study on Behance: the problem, the flows and the final product screens.', 'SaaS': 'The full case study on Behance: the problem, the flows and the final product screens.',
       'Mobile app': 'The complete app walkthrough on Behance, from key flows to the final screens.', 'Website': 'The complete website project on Behance, page by page.',
       'Packaging': 'Print and packaging work on Behance, showing the label designs in full.', 'Logo & illustration': 'Mascot logos and illustration work on Behance, shown piece by piece.' };
-    const bhIdx = Math.min(st0.bhIdx || 0, bhData.length - 1);
     const two2 = (n) => (n < 10 ? '0' : '') + n;
-    const behance = bhData.map((x, i) => ({ ...x, num: two2(i + 1), imgCls: 'bh-img' + (i === bhIdx ? ' on' : ''), alt: 'Cover of ' + x.title + ' on Behance', cls: 'bh-tab' + (i === bhIdx ? ' on' : ''), sel: i === bhIdx ? 'true' : 'false',
-      pick: () => { if ((this.state.bhIdx || 0) !== i) this.setState({ bhIdx: i }); } }));
-    const bhCur = { ...behance[bhIdx], desc: bhDesc[bhData[bhIdx].kind] };
-    if (!this._bhPrev) {
-      this._bhPrev = () => { const n = 7; this.setState({ bhIdx: ((this.state.bhIdx || 0) + n - 1) % n }); };
-      this._bhNext = () => { const n = 7; this.setState({ bhIdx: ((this.state.bhIdx || 0) + 1) % n }); };
-    }
 
     const jobsRaw = [
       { period: '2022 – Present', current: true, role: 'Senior UI/UX Designer', company: 'Teo International', place: 'Islamabad, PK', tint: accent, body: 'Leading UX strategy with executive leadership and engineering; owning the full UI lifecycle for web, mobile and SaaS products, from research and personas to tested prototypes.' },
@@ -633,14 +625,16 @@ class Component extends DCLogic {
       };
       this._lpMove = (e) => { const t = e.currentTarget, b = t.getBoundingClientRect(); t.style.setProperty('--mx', (e.clientX - b.left) + 'px'); t.style.setProperty('--my', (e.clientY - b.top) + 'px'); };
     }
-    const live = liveData.map((x, i) => {
+    // Behance case studies follow the live sites in the same rail
+    const bhCards = bhData.map((b) => ({ name: b.title, tint: b.color, c1: b.kind, c2: 'Case study', kind: b.kind.toUpperCase(), domain: 'behance.net', url: b.url, img: b.img, desc: bhDesc[b.kind], bh: true }));
+    const live = liveData.concat(bhCards).map((x, i) => {
       const isDc = x.url.indexOf('.dc.html') !== -1;
-      const off = !x.img, cs = isDc;
+      const off = !x.img, cs = isDc, bh = !!x.bh;
       return { ...x, imgCls: x.full ? 'lp-full' : 'lp-cover', sy: x.sy || '0%', num: (i < 9 ? '0' : '') + (i + 1), hasImg: !!x.img, noImg: off,
-        alt: 'Homepage of ' + x.name, target: isDc ? '_self' : '_blank', rd: (Math.min(i, 3) * 0.08).toFixed(2) + 's',
-        status: off ? 'OFFLINE' : cs ? 'CASE STUDY' : 'LIVE', tagCls: 'lp-tag' + (off ? ' off' : cs ? ' cs' : ''),
-        go: off ? 'Company page' : cs ? 'Read it' : 'Visit',
-        aria: off ? x.name + ' on LinkedIn' : cs ? 'Read the ' + x.name + ' case study' : 'Visit ' + x.name + ' (opens in a new tab)' };
+        alt: bh ? 'Cover of ' + x.name + ' on Behance' : 'Homepage of ' + x.name, target: isDc ? '_self' : '_blank', rd: (Math.min(i, 3) * 0.08).toFixed(2) + 's',
+        status: off ? 'OFFLINE' : bh ? 'BEHANCE' : cs ? 'CASE STUDY' : 'LIVE', tagCls: 'lp-tag' + (off ? ' off' : bh ? ' bh' : cs ? ' cs' : ''),
+        go: off ? 'Company page' : bh ? 'View' : cs ? 'Read it' : 'Visit',
+        aria: off ? x.name + ' on LinkedIn' : bh ? 'View ' + x.name + ' on Behance (opens in a new tab)' : cs ? 'Read the ' + x.name + ' case study' : 'Visit ' + x.name + ' (opens in a new tab)' };
     });
 
 
@@ -668,14 +662,14 @@ class Component extends DCLogic {
       band, copyMail: this._copyMail, copyLabel: st0.copied ? 'COPIED ✓' : 'COPY EMAIL', copyCls: 'copy' + (st0.copied ? ' done' : ''),
       pvc1: pvc(0), pvc2: pvc(1), pvc3: pvc(2), pvc4: pvc(3), pvc5: pvc(4),
       stepBarCls: 'st-bar' + (st0.stepAuto === false ? '' : ' auto'),
-      liveN: (live.length < 10 ? '0' : '') + live.length, live, lpPinRef: this._lpPinRef, lpRailRef: this._lpRailRef, lpNumRef: this._lpNumRef, lpBarRef: this._lpBarRef, lpMove: this._lpMove,
+      liveN: (live.length < 10 ? '0' : '') + live.length, liveOnly: two2(liveData.length), live, lpPinRef: this._lpPinRef, lpRailRef: this._lpRailRef, lpNumRef: this._lpNumRef, lpBarRef: this._lpBarRef, lpMove: this._lpMove,
       accent, nameChars, ldrNumRef: this._ldrNumRef, ldrBarRef: this._ldrBarRef,
       rootCls: (motion ? 'motion-on js-rv' : 'motion-off') + (ready ? ' is-ready' : '') + (menuOpen ? ' menu-open' : ''),
       rootRef: this._rootRef, dotRef: this._dotRef, toggleMenu: this._toggleMenu, closeMenu: this._closeMenu,
       menuExpanded: menuOpen ? 'true' : 'false', menuLabel: menuOpen ? 'CLOSE' : 'MENU', menu, menu2, ticks,
       secNum: (secIdx < 10 ? '0' : '') + secIdx, secName: secNames[secIdx],
       meshRef: this._meshRef, onHeroMove: this._onHeroMove, onHeroLeave: this._onHeroLeave,
-      marquee, tools, steps, cur, filters, cases, socials, jobs, brands, toolsText, portfolio, tk1a: tkData[0].slice(0, 2), tk1b: tkData[0].slice(2), tk1m: { has: tkData[0].length > 2, none: tkData[0].length <= 2, n: tkData[0].length, label: tkData[0].length === 1 ? '1 tool' : tkData[0].length + ' tools' }, tk2a: tkData[1].slice(0, 2), tk2b: tkData[1].slice(2), tk2m: { has: tkData[1].length > 2, none: tkData[1].length <= 2, n: tkData[1].length, label: tkData[1].length === 1 ? '1 tool' : tkData[1].length + ' tools' }, tk3a: tkData[2].slice(0, 2), tk3b: tkData[2].slice(2), tk3m: { has: tkData[2].length > 2, none: tkData[2].length <= 2, n: tkData[2].length, label: tkData[2].length === 1 ? '1 tool' : tkData[2].length + ' tools' }, tk4a: tkData[3].slice(0, 2), tk4b: tkData[3].slice(2), tk4m: { has: tkData[3].length > 2, none: tkData[3].length <= 2, n: tkData[3].length, label: tkData[3].length === 1 ? '1 tool' : tkData[3].length + ' tools' }, tk5a: tkData[4].slice(0, 2), tk5b: tkData[4].slice(2), tk5m: { has: tkData[4].length > 2, none: tkData[4].length <= 2, n: tkData[4].length, label: tkData[4].length === 1 ? '1 tool' : tkData[4].length + ' tools' }, tkCount, xpCompanies, pages, shotFilters, segRef: this._segRef, indChips, vxLead, vxTotal: shotData.length, vxMotion: shotData.filter((x) => x.vid).length, vxInd: allInds, behance, bhCur, bhTotal: two2(bhData.length), bhPrev: this._bhPrev, bhNext: this._bhNext, shotCols,
+      marquee, tools, steps, cur, filters, cases, socials, jobs, brands, toolsText, portfolio, tk1a: tkData[0].slice(0, 2), tk1b: tkData[0].slice(2), tk1m: { has: tkData[0].length > 2, none: tkData[0].length <= 2, n: tkData[0].length, label: tkData[0].length === 1 ? '1 tool' : tkData[0].length + ' tools' }, tk2a: tkData[1].slice(0, 2), tk2b: tkData[1].slice(2), tk2m: { has: tkData[1].length > 2, none: tkData[1].length <= 2, n: tkData[1].length, label: tkData[1].length === 1 ? '1 tool' : tkData[1].length + ' tools' }, tk3a: tkData[2].slice(0, 2), tk3b: tkData[2].slice(2), tk3m: { has: tkData[2].length > 2, none: tkData[2].length <= 2, n: tkData[2].length, label: tkData[2].length === 1 ? '1 tool' : tkData[2].length + ' tools' }, tk4a: tkData[3].slice(0, 2), tk4b: tkData[3].slice(2), tk4m: { has: tkData[3].length > 2, none: tkData[3].length <= 2, n: tkData[3].length, label: tkData[3].length === 1 ? '1 tool' : tkData[3].length + ' tools' }, tk5a: tkData[4].slice(0, 2), tk5b: tkData[4].slice(2), tk5m: { has: tkData[4].length > 2, none: tkData[4].length <= 2, n: tkData[4].length, label: tkData[4].length === 1 ? '1 tool' : tkData[4].length + ' tools' }, tkCount, xpCompanies, pages, shotFilters, segRef: this._segRef, indChips, vxLead, vxTotal: shotData.length, vxMotion: shotData.filter((x) => x.vid).length, vxInd: allInds, bhTotal: two2(bhData.length), shotCols,
       shotTrackCls: 'shot-track ' + ((this._fTick || 0) % 2 ? 'fa' : 'fb'), shotShift: (-100 * shotPage) + '%', shotPageNow: two(shotPage + 1), shotPageTotal: two(shotPages),
       shotPrev: goShot(-1), shotNext: goShot(1), shotAtStart: shotPage === 0, shotAtEnd: shotPage >= shotPages - 1, shotDots,
       shotFrom: shotList.length ? shotPage * perPage + 1 : 0, shotTo: Math.min(shotList.length, shotPage * perPage + perPage), shotCount: shotList.length

@@ -543,6 +543,25 @@ class Component extends DCLogic {
       'Packaging': 'Print and packaging work on Behance, showing the label designs in full.', 'Logo & illustration': 'Mascot logos and illustration work on Behance, shown piece by piece.' };
     const two2 = (n) => (n < 10 ? '0' : '') + n;
 
+    // LinkedIn recommendations, shown in full in the drifting slider (the list repeats once so the loop is seamless)
+    const recs = [
+      { name: 'Craig Robinson', role: 'CEO, StableLogic', rel: 'SENIOR TO AHMAD', img: 'assets/7622a043ef7599b27d4791a4caa9db79.jpg',
+        quote: 'Ahmad has a real talent for taking complex B2B products and making them clear and intuitive for the people who use them.', tags: ['Complex B2B products', 'Design systems', 'Calm & collaborative'],
+        paras: ['I’m pleased to recommend Ahmad, who worked with us at StableLogic as a Senior Product Designer from 2024 to 2026, including UX work on our Veroxos platform. Ahmad has a real talent for taking complex B2B products and making them clear and intuitive for the people who use them. He brought strong UI/UX and design systems skills to our client and product work, and he was always calm, easy to work with and generous with his time. He’s a thoroughly nice person and a valued member of any team, and I wish him every success.'] },
+      { name: 'Sajid Rasool', role: 'Head of Managed Services, StableLogic', rel: 'MANAGED AHMAD DIRECTLY', img: 'assets/e292e117f54d5ecda1ec6296a87046d4.jpg',
+        quote: 'He consistently demonstrated strong product design skills, professionalism, and a commitment to delivering high-quality work.', tags: ['Veroxos & easyStorage', 'Reliable delivery', 'Professionalism'],
+        paras: ['I had the pleasure of working with Ahmad across several projects, including Veroxos and easyStorage, where he consistently demonstrated strong product design skills, professionalism, and a commitment to delivering high-quality work. He was reliable, collaborative, and effective at translating requirements into well-designed solutions. Ahmad contributed positively to each project, ensuring good delivery and maintaining a high standard of work. I would happily recommend him to any team looking for a talented and dependable product designer.'] },
+      { name: 'Saba Qadir', role: 'UI/UX Expert & Project Manager', rel: 'MANAGED AHMAD DIRECTLY', img: 'assets/2b5a3ee703696bb1d8a806df5ba00328.jpg',
+        quote: 'He brings creativity, attention to detail, and a strong understanding of user-centered design to his work.', tags: ['Creativity', 'Attention to detail', 'User-centred design'],
+        paras: ['I had an amazing time working with Ahmad, and it was a great experience. He brings creativity, attention to detail, and a strong understanding of user-centered design to his work.',
+          'What I particularly appreciated was his ability to translate requirements into intuitive, visually appealing designs while remaining open to feedback and collaboration. He demonstrated a great sense of ownership, adaptability, and commitment to delivering quality work.',
+          'I truly enjoyed working with him and would highly recommend him to any team looking for a talented and dedicated UI/UX Designer. Wishing him continued success in his career!'] },
+      { name: 'Jeevan Nijjar', role: 'Product Owner', rel: 'WORKED ON THE SAME TEAM', img: 'assets/dd5e797e5a6fd1597bf9c92b66296776.jpg',
+        quote: 'He brings a rare mix of sharp analytical thinking and creativity and a great collaborative energy to the team.', tags: ['Analytical thinking', 'Creativity', 'Team energy'],
+        paras: ['I’ve had the pleasure of working with Ahmad for 1 year. He brings a rare mix of sharp analytical thinking and creativity and a great collaborative energy to the team. Whether tackling complex challenges or supporting colleagues, he always delivers with reliability and a positive attitude. Anyone would be lucky to have them on their team.'] }
+    ];
+    const recLoop = recs.concat(recs).map((r, i) => ({ ...r, dup: i >= recs.length ? 'true' : 'false', paras: r.paras.map((t) => ({ t })), tags: r.tags.map((t) => ({ t })) }));
+
     const jobsRaw = [
       { period: '2022 – Present', current: true, role: 'Senior UI/UX Designer', company: 'Teo International', place: 'Islamabad, PK', tint: accent, body: 'Leading UX strategy with executive leadership and engineering; owning the full UI lifecycle for web, mobile and SaaS products, from research and personas to tested prototypes.' },
       { period: 'Feb 2024 – May 2026', current: false, role: 'Product Designer', company: 'StableLogic', place: 'Remote · UK', tint: '#B8A4FF', body: 'Led end-to-end UX for digital products, built design systems in Figma and shipped designs in Webflow to close the gap between design and development.' },
@@ -656,7 +675,7 @@ class Component extends DCLogic {
       ['UL', 'UX Leadership'], ['Fg', 'Figma'], ['Wf', 'Webflow'], ['Fr', 'Framer'], ['SA', 'SaaS Products'], ['FT', 'Fintech'], ['MB', 'Mobile Apps']];
     const skillStrip = skills.concat(skills).map(([b, t], i) => ({ b, t, dup: i >= skills.length ? 'true' : 'false' }));
     return {
-      skillStrip,
+      skillStrip, recLoop,
       band, copyMail: this._copyMail, copyLabel: st0.copied ? 'COPIED ✓' : 'COPY EMAIL', copyCls: 'copy' + (st0.copied ? ' done' : ''),
       pvc1: pvc(0), pvc2: pvc(1), pvc3: pvc(2), pvc4: pvc(3), pvc5: pvc(4),
       stepBarCls: 'st-bar' + (st0.stepAuto === false ? '' : ' auto'),

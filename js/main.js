@@ -536,11 +536,7 @@ class Component extends DCLogic {
     const bhData = [
       { title: 'Packaging Mobile App', kind: 'Mobile app', color: '#4FD1A5', img: 'assets/2d398d81da7f2750ac2984fded0df710.jpg', url: 'https://www.behance.net/gallery/194403009/Packaging-Mobile-App' },
       { title: 'Kwik eShopping App', kind: 'Mobile app', color: '#FF5C6C', img: 'assets/d8549e25d3bb5d7509ed44e75527cd98.jpg', url: 'https://www.behance.net/gallery/133340329/Kwik-eShopping-App' },
-      { title: 'Askari Guards Security Services', kind: 'Mobile app', color: '#5AB0FF', img: 'assets/9f812befdbbabda853d7b2e341658e10.jpg', url: 'https://www.behance.net/gallery/130098993/Askari-Guards-Security-Sevices' },
-      { title: 'Label Design', kind: 'Packaging', color: '#F2C230', img: 'assets/c64ed9012344508e73554829fd1e3056.jpg', url: 'https://www.behance.net/gallery/110704759/Label-Design' },
-      { title: 'Mystical Creatures', kind: 'Logo & illustration', color: '#3DDC84', img: 'assets/e99fe7f0a9f94e6323d41d8d61dace9a.jpg', url: 'https://www.behance.net/gallery/89456581/MYSTICAL-CREATURES' },
-      { title: 'Digital Teams Management System', kind: 'Web app', color: '#9B7CFF', img: 'assets/644bf74e604cde627c6b1d14326c0200.jpg', url: 'https://www.behance.net/gallery/258024841/Digital-Teams-Management-System' },
-      { title: 'SaaS Portal', kind: 'SaaS', color: '#5B7CFF', img: 'assets/51b3376a63c0d175208bec768e319896.jpg', url: 'https://www.behance.net/gallery/257507159/SAAS-Portal' }
+      { title: 'Askari Guards Security Services', kind: 'Mobile app', color: '#5AB0FF', img: 'assets/9f812befdbbabda853d7b2e341658e10.jpg', url: 'https://www.behance.net/gallery/130098993/Askari-Guards-Security-Sevices' }
     ];
     const bhDesc = { 'Web app': 'The full case study on Behance: the problem, the flows and the final product screens.', 'SaaS': 'The full case study on Behance: the problem, the flows and the final product screens.',
       'Mobile app': 'The complete app walkthrough on Behance, from key flows to the final screens.', 'Website': 'The complete website project on Behance, page by page.',

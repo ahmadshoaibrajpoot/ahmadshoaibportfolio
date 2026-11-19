@@ -375,8 +375,8 @@ class Component extends DCLogic {
     const motion = this.props.motion ?? true;
     this._accent = accent;
     this._motionOn = motion;
-    this._secIds = ['top', 'about', 'work', 'kind-words', 'services', 'process', 'toolkit', 'experience', 'contact'];
-    const secNames = ['HOME', 'ABOUT', 'WORK', 'RECOMMENDATIONS', 'EXPERTISE', 'PROCESS', 'TOOLKIT', 'EXPERIENCE', 'CONTACT'];
+    this._secIds = ['top', 'about', 'work', 'kind-words', 'process', 'toolkit', 'experience', 'contact'];
+    const secNames = ['HOME', 'ABOUT', 'WORK', 'RECOMMENDATIONS', 'PROCESS', 'TOOLKIT', 'EXPERIENCE', 'CONTACT'];
     if (!this._rootRef) {
       this._rootRef = (el) => { if (el) { this._root = el; this._bindScroll(); } else { this._unbindScroll(); this._root = null; } };
       this._dotRef = (el) => { this._dot = el; };
@@ -389,7 +389,7 @@ class Component extends DCLogic {
     const st0 = this.state || {};
     const menuOpen = !!st0.menu;
     const secIdx = st0.sec || 0;
-    const menu = [['About', '#about'], ['Work', '#work'], ['Skills', '#services'], ['Process', '#process'], ['Experience', '#experience'], ['Contact', '#contact']]
+    const menu = [['About', '#about'], ['Work', '#work'], ['Process', '#process'], ['Experience', '#experience'], ['Contact', '#contact']]
       .map((m, i) => ({ label: m[0].toUpperCase(), href: m[1], num: '0' + (i + 1), delay: (0.18 + i * 0.06).toFixed(2) + 's' }));
     const menu2 = [['Recommendations', '#kind-words'], ['Toolkit', '#toolkit']].map((m) => ({ label: m[0].toUpperCase(), href: m[1] }));
     const ticks = (st0.ticks || []).map((v) => ({ top: v + '%' }));
@@ -576,15 +576,6 @@ class Component extends DCLogic {
       { label: 'EasyStorage', url: 'https://www.easystorage.com/' }
     ];
 
-    const svc = [
-      { num: '01', title: 'Product UX', tint: '#B8A4FF', icon: 'M3 12h4l3-8 4 16 3-8h4', body: 'Research, user flows and information architecture that make complex products feel obvious.' },
-      { num: '02', title: 'UI Design', tint: accent, icon: 'M4 4h16v16H4zM4 9h16M9 9v11', body: 'Bold, accessible interfaces for web and mobile, crafted down to every state and edge case.' },
-      { num: '03', title: 'Design Systems', tint: '#F2EFE8', icon: 'M12 3l8 4.5v9L12 21l-8-4.5v-9zM12 12l8-4.5M12 12v9M12 12 4 7.5', body: 'Tokens, components and documentation that keep a product consistent as the team and the product grow.' },
-      { num: '04', title: 'Prototyping', tint: '#FF9F6B', icon: 'M5 3l14 9-14 9z', body: 'Clickable prototypes to test ideas with real users, and production builds in Webflow, Framer, HTML and CSS when a page needs to go live.' },
-      { num: '05', title: 'UX Leadership', tint: accent, icon: '', body: 'Leading UX strategy alongside executives and engineering, running research and usability testing, and setting the design standard across products.' }
-    ];
-    const [sv1, sv2, sv3, sv4, sv5] = svc.map((x) => x.body);
-
     const stepData = [
       { num: '01', verb: 'Listen', time: 'DISCOVERY', title: 'Kickoff & discovery', q: 'What problem are we really solving, for whom, and how will we know it worked?', methods: ['Stakeholder interviews', 'Heuristic audit', 'Analytics review', 'Competitor scan'], with: 'Founders and PMs, the engineering lead, support and sales', lens: 'I don’t move to screens until the problem and the success metrics are agreed in writing.', body: 'I start with stakeholders, not a mood board: learning the business, the users and the constraints, auditing what already exists, and agreeing on goals we can actually measure.', gets: ['A one-page problem brief', 'Clear goals and success metrics', 'A timeline with milestones'] },
       { num: '02', verb: 'Map', time: 'DEFINITION', title: 'Research & structure', q: 'What do users actually do today, and where does it break?', methods: ['User interviews', 'Journey mapping', 'Task flows', 'Card sorting'], with: 'The PM, real users and anyone who talks to customers', lens: 'I turn research into a handful of decisions the team can act on, not a deck that sits in a drive.', body: 'User interviews, quick surveys or analytics deep-dives, whatever the question needs. Then I map journeys, flows and the information architecture so everyone sees the same picture.', gets: ['Key user insights', 'User flows and journey maps', 'Sitemap / app structure'] },
@@ -597,14 +588,6 @@ class Component extends DCLogic {
     const cur = { ...curRaw, gets: curRaw.gets.map((g) => ({ label: g })), methodsL: curRaw.methods.map((t) => ({ t })) };
     const pvc = (i) => (i === step ? 'on' : '');
 
-    const values = [
-      { mark: '01', icon: 'M16 19v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 17.5V19M10 10.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6M20 19v-1.5a3.5 3.5 0 0 0-2.5-3.35M15.5 4.6a3 3 0 0 1 0 5.8', title: 'Decisions backed by users', body: 'Every major choice traces back to research or testing, not just my taste or the loudest opinion in the room.', bg: '#131315', fg: '#EDEDEE' },
-      { mark: '02', icon: 'M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 3v5h5M9 14.5l2 2 4-4', title: 'Files engineers can build from', body: 'Named layers, auto layout, documented components and specs, so handoff means fewer questions and fewer rebuilds.', bg: '#131315', fg: '#EDEDEE' },
-      { mark: '03', icon: 'M12 3 3 7.5 12 12l9-4.5zM3 12l9 4.5 9-4.5M3 16.5 12 21l9-4.5', title: 'Systems that scale', body: 'Tokens and components that let a product and its team grow without redesigning from scratch.', bg: '#131315', fg: '#EDEDEE' },
-      { mark: '04', icon: 'M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.8A8 8 0 1 1 21 12zM8.5 11h7M8.5 14h4.5', title: 'Clear, async-friendly communication', body: 'Written decisions, recorded walkthroughs and one source of truth, refined while working with teams in the UK, the US, Indonesia and Denmark.', bg: '#131315', fg: '#EDEDEE' },
-      { mark: '05', icon: 'M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6', title: 'Accessible by default', body: 'Contrast, focus states, readable type and touch targets that meet WCAG, so more people can use the product.', bg: '#131315', fg: '#EDEDEE' },
-      { mark: '06', icon: 'M8.5 7 3.5 12l5 5M15.5 7l5 5-5 5M13.5 4.5l-3 15', title: 'Design and engineering fluency', body: 'As a UX engineer I build in Webflow, Framer, HTML and CSS, so designs stay feasible and ship the way they were drawn.', bg: '#131315', fg: '#EDEDEE' }
-    ];
 
     const filterDefs = [ { id: 'all', label: 'All' }, { id: 'mobile', label: 'Mobile' }, { id: 'web', label: 'Web' }, { id: 'saas', label: 'SaaS' } ];
     const filters = filterDefs.map((f) => ({ ...f, active: f.id === filter, inactive: f.id !== filter, pick: () => this.setState({ filter: f.id }) }));
@@ -692,7 +675,7 @@ class Component extends DCLogic {
       menuExpanded: menuOpen ? 'true' : 'false', menuLabel: menuOpen ? 'CLOSE' : 'MENU', menu, menu2, ticks,
       secNum: (secIdx < 10 ? '0' : '') + secIdx, secName: secNames[secIdx],
       meshRef: this._meshRef, onHeroMove: this._onHeroMove, onHeroLeave: this._onHeroLeave,
-      marquee, tools, steps, cur, values, filters, cases, socials, jobs, brands, toolsText, portfolio, tk1a: tkData[0].slice(0, 2), tk1b: tkData[0].slice(2), tk1m: { has: tkData[0].length > 2, none: tkData[0].length <= 2, n: tkData[0].length, label: tkData[0].length === 1 ? '1 tool' : tkData[0].length + ' tools' }, tk2a: tkData[1].slice(0, 2), tk2b: tkData[1].slice(2), tk2m: { has: tkData[1].length > 2, none: tkData[1].length <= 2, n: tkData[1].length, label: tkData[1].length === 1 ? '1 tool' : tkData[1].length + ' tools' }, tk3a: tkData[2].slice(0, 2), tk3b: tkData[2].slice(2), tk3m: { has: tkData[2].length > 2, none: tkData[2].length <= 2, n: tkData[2].length, label: tkData[2].length === 1 ? '1 tool' : tkData[2].length + ' tools' }, tk4a: tkData[3].slice(0, 2), tk4b: tkData[3].slice(2), tk4m: { has: tkData[3].length > 2, none: tkData[3].length <= 2, n: tkData[3].length, label: tkData[3].length === 1 ? '1 tool' : tkData[3].length + ' tools' }, tk5a: tkData[4].slice(0, 2), tk5b: tkData[4].slice(2), tk5m: { has: tkData[4].length > 2, none: tkData[4].length <= 2, n: tkData[4].length, label: tkData[4].length === 1 ? '1 tool' : tkData[4].length + ' tools' }, tkCount, sv1, sv2, sv3, sv4, sv5, xpCompanies, pages, shotFilters, segRef: this._segRef, indChips, vxLead, vxTotal: shotData.length, vxMotion: shotData.filter((x) => x.vid).length, vxInd: allInds, behance, bhCur, bhTotal: two2(bhData.length), bhPrev: this._bhPrev, bhNext: this._bhNext, shotCols,
+      marquee, tools, steps, cur, filters, cases, socials, jobs, brands, toolsText, portfolio, tk1a: tkData[0].slice(0, 2), tk1b: tkData[0].slice(2), tk1m: { has: tkData[0].length > 2, none: tkData[0].length <= 2, n: tkData[0].length, label: tkData[0].length === 1 ? '1 tool' : tkData[0].length + ' tools' }, tk2a: tkData[1].slice(0, 2), tk2b: tkData[1].slice(2), tk2m: { has: tkData[1].length > 2, none: tkData[1].length <= 2, n: tkData[1].length, label: tkData[1].length === 1 ? '1 tool' : tkData[1].length + ' tools' }, tk3a: tkData[2].slice(0, 2), tk3b: tkData[2].slice(2), tk3m: { has: tkData[2].length > 2, none: tkData[2].length <= 2, n: tkData[2].length, label: tkData[2].length === 1 ? '1 tool' : tkData[2].length + ' tools' }, tk4a: tkData[3].slice(0, 2), tk4b: tkData[3].slice(2), tk4m: { has: tkData[3].length > 2, none: tkData[3].length <= 2, n: tkData[3].length, label: tkData[3].length === 1 ? '1 tool' : tkData[3].length + ' tools' }, tk5a: tkData[4].slice(0, 2), tk5b: tkData[4].slice(2), tk5m: { has: tkData[4].length > 2, none: tkData[4].length <= 2, n: tkData[4].length, label: tkData[4].length === 1 ? '1 tool' : tkData[4].length + ' tools' }, tkCount, xpCompanies, pages, shotFilters, segRef: this._segRef, indChips, vxLead, vxTotal: shotData.length, vxMotion: shotData.filter((x) => x.vid).length, vxInd: allInds, behance, bhCur, bhTotal: two2(bhData.length), bhPrev: this._bhPrev, bhNext: this._bhNext, shotCols,
       shotTrackCls: 'shot-track ' + ((this._fTick || 0) % 2 ? 'fa' : 'fb'), shotShift: (-100 * shotPage) + '%', shotPageNow: two(shotPage + 1), shotPageTotal: two(shotPages),
       shotPrev: goShot(-1), shotNext: goShot(1), shotAtStart: shotPage === 0, shotAtEnd: shotPage >= shotPages - 1, shotDots,
       shotFrom: shotList.length ? shotPage * perPage + 1 : 0, shotTo: Math.min(shotList.length, shotPage * perPage + perPage), shotCount: shotList.length

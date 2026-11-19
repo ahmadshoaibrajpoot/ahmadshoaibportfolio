@@ -590,7 +590,7 @@ a:focus-visible,button:focus-visible{outline:1px solid var(--accent);outline-off
 @media (max-height: 780px){.lp-intro{display:none}.lp-stick{padding-top:80px;gap:20px}}
 .lp-rail{display:flex;gap:22px;width:max-content;padding:4px max(24px,calc((100vw - 1320px) / 2 + 24px));will-change:transform}
 .lp-rail .lp-card{flex:none;width:var(--cw)}
-.lp-card{pointer-events:none}
+.lp-card{cursor:pointer}
 .lp-card{position:relative;display:flex;flex-direction:column;border:1px solid #222225;border-radius:18px;background:#111113;overflow:hidden;transition:border-color .4s ease,box-shadow .5s ease,translate .5s cubic-bezier(.2,.75,.2,1)}
 .lp-card::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(120% 60% at 50% 0%,color-mix(in srgb,var(--tint) 22%,transparent),transparent 60%);opacity:.35;transition:opacity .5s ease}
 .lp-card:hover{border-color:color-mix(in srgb,var(--tint) 55%,#222225);box-shadow:0 40px 90px -50px color-mix(in srgb,var(--tint) 70%,transparent);translate:0 -4px}

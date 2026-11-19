@@ -357,7 +357,7 @@
           </div>
           <div class="lp-rail" ref="{{ lpRailRef }}">
         <sc-for list="{{ live }}" as="lv" hint-placeholder-count="10">
-          <article class="lp-card rv" style="--tint: {{ lv.tint }}; --rd: {{ lv.rd }}">
+          <article class="lp-card rv" onClick="{{ lpOpen }}" style="--tint: {{ lv.tint }}; --rd: {{ lv.rd }}">
             <a class="lp-shot" href="{{ lv.url }}" target="{{ lv.target }}" rel="noopener" aria-label="{{ lv.aria }}" onPointerMove="{{ lpMove }}" draggable="false">
               <span class="lp-bar" aria-hidden="true"><span class="lp-dots"><i></i><i></i><i></i></span><span class="lp-url">{{ lv.domain }}</span></span>
               <span class="lp-view">

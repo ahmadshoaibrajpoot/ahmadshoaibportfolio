@@ -619,6 +619,8 @@ class Component extends DCLogic {
         if (this._lpNum) this._lpNum.textContent = (n < 10 ? '0' : '') + n;
         if (this._lpBar) this._lpBar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
       };
+      // a click anywhere on a card opens its site in this tab
+      this._lpOpen = (e) => { if (e.target.closest('a')) return; const a = e.currentTarget.querySelector('a.lp-shot'); if (a) window.location.href = a.href; };
       this._lpMove = (e) => { const t = e.currentTarget, b = t.getBoundingClientRect(); t.style.setProperty('--mx', (e.clientX - b.left) + 'px'); t.style.setProperty('--my', (e.clientY - b.top) + 'px'); };
     }
     // Behance case studies follow the live sites in the same rail
@@ -627,10 +629,10 @@ class Component extends DCLogic {
       const isDc = x.url.indexOf('.dc.html') !== -1;
       const off = !x.img, cs = isDc, bh = !!x.bh;
       return { ...x, imgCls: x.full ? 'lp-full' : 'lp-cover', sy: x.sy || '0%', num: (i < 9 ? '0' : '') + (i + 1), hasImg: !!x.img, noImg: off,
-        alt: bh ? 'Cover of ' + x.name + ' on Behance' : 'Homepage of ' + x.name, target: isDc ? '_self' : '_blank', rd: (Math.min(i, 3) * 0.08).toFixed(2) + 's',
+        alt: bh ? 'Cover of ' + x.name + ' on Behance' : 'Homepage of ' + x.name, target: '_self', rd: (Math.min(i, 3) * 0.08).toFixed(2) + 's',
         status: off ? 'OFFLINE' : bh ? 'BEHANCE' : cs ? 'CASE STUDY' : 'LIVE', tagCls: 'lp-tag' + (off ? ' off' : bh ? ' bh' : cs ? ' cs' : ''),
         go: off ? 'Company page' : bh ? 'View' : cs ? 'Read it' : 'Visit',
-        aria: off ? x.name + ' on LinkedIn' : bh ? 'View ' + x.name + ' on Behance (opens in a new tab)' : cs ? 'Read the ' + x.name + ' case study' : 'Visit ' + x.name + ' (opens in a new tab)' };
+        aria: off ? x.name + ' on LinkedIn' : bh ? 'View ' + x.name + ' on Behance' : cs ? 'Read the ' + x.name + ' case study' : 'Visit ' + x.name };
     });
 
 
@@ -658,7 +660,7 @@ class Component extends DCLogic {
       band, copyMail: this._copyMail, copyLabel: st0.copied ? 'COPIED ✓' : 'COPY EMAIL', copyCls: 'copy' + (st0.copied ? ' done' : ''),
       pvc1: pvc(0), pvc2: pvc(1), pvc3: pvc(2), pvc4: pvc(3), pvc5: pvc(4),
       stepBarCls: 'st-bar' + (st0.stepAuto === false ? '' : ' auto'),
-      liveN: (live.length < 10 ? '0' : '') + live.length, liveOnly: two2(liveData.length), live, lpPinRef: this._lpPinRef, lpRailRef: this._lpRailRef, lpNumRef: this._lpNumRef, lpBarRef: this._lpBarRef, lpMove: this._lpMove,
+      liveN: (live.length < 10 ? '0' : '') + live.length, liveOnly: two2(liveData.length), live, lpPinRef: this._lpPinRef, lpRailRef: this._lpRailRef, lpNumRef: this._lpNumRef, lpBarRef: this._lpBarRef, lpMove: this._lpMove, lpOpen: this._lpOpen,
       accent, nameChars, ldrNumRef: this._ldrNumRef, ldrBarRef: this._ldrBarRef,
       rootCls: (motion ? 'motion-on js-rv' : 'motion-off') + (ready ? ' is-ready' : '') + (menuOpen ? ' menu-open' : ''),
       rootRef: this._rootRef, dotRef: this._dotRef, toggleMenu: this._toggleMenu, closeMenu: this._closeMenu,
